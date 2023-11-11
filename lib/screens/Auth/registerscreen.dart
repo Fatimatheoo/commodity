@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import '../../reuseablewidgets/customtextbox.dart';
 import '../../utilitis/colors.dart';
 import '../../reuseablewidgets/CustomBottomcontainer.dart';
-import '../login/loginscreen.dart';
+import 'loginscreen.dart';
 
 class Registerscreen extends StatefulWidget {
   const Registerscreen({super.key});
