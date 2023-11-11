@@ -1,3 +1,5 @@
+import 'package:commodity/reuseablewidgets/CustomDialogbox.dart';
+import 'package:commodity/reuseablewidgets/cancelcontainer.dart';
 import 'package:commodity/reuseablewidgets/lettercontainer.dart';
 import 'package:commodity/reuseablewidgets/subscriptionContainer.dart';
 import 'package:commodity/utilitis/gaps.dart';
@@ -31,19 +33,7 @@ class Profile extends StatelessWidget {
            VerticalGap(ScreenHeight(context)*0.02),
            SubscriptionContainer(),
            VerticalGap(ScreenHeight(context)*0.03),
-           Container(
-             height: 40,
-             width: ScreenWidth(context)*0.7,
-             decoration: BoxDecoration(
-               borderRadius: BorderRadius.circular(5),
-               color: AppTheme.white,
-               border: Border.all(
-                 color: AppTheme.red,
-                 width: 1
-               )
-             ),
-             child: Center(child: Text('Cancel Subscription',style: T23textStyle)),
-           ),
+           CancelContainer(),
            VerticalGap(ScreenHeight(context)*0.02),
            SizedBox(
              height: ScreenHeight(context)*0.5,

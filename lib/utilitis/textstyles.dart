@@ -23,7 +23,7 @@ TextStyle T20textStyle = const TextStyle(fontSize: 14,fontStyle: FontStyle.norma
 TextStyle T21textStyle = const TextStyle(fontSize: 12,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.OffWhite);
 TextStyle T22textStyle = const TextStyle(fontSize: 20,fontStyle: FontStyle.normal,fontWeight: FontWeight.w600,fontFamily: 'Font1',color: AppTheme.white);
 TextStyle T23textStyle = const TextStyle(fontSize: 14,fontStyle: FontStyle.normal,fontWeight: FontWeight.w600,fontFamily: 'Font1',color: AppTheme.red);
-//TextStyle T22textStyle = const TextStyle(fontSize: 20,fontStyle: FontStyle.normal,fontWeight: FontWeight.w600,fontFamily: 'Font1',color: AppTheme.white);
-//TextStyle T22textStyle = const TextStyle(fontSize: 20,fontStyle: FontStyle.normal,fontWeight: FontWeight.w600,fontFamily: 'Font1',color: AppTheme.white);
+TextStyle T24textStyle = const TextStyle(fontSize: 18,fontStyle: FontStyle.normal,fontWeight: FontWeight.w500,fontFamily: 'Font1',color: AppTheme.lightblack);
+TextStyle T25textStyle = const TextStyle(fontSize: 12,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.lightblack);
 
 

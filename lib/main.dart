@@ -1,10 +1,3 @@
-import 'package:commodity/reuseablewidgets/CustomBottomcontainer.dart';
-import 'package:commodity/screens/Subscription/AboutScreen.dart';
-import 'package:commodity/screens/Profile/Profile.dart';
-import 'package:commodity/screens/Subscription/SubcriptionBenefits.dart';
-import 'package:commodity/screens/Subscription/Subscription.dart';
-import 'package:commodity/screens/Auth/loginscreen.dart';
-import 'package:commodity/screens/Profile/personalinfoscreen.dart';
 import 'package:commodity/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: Profile(),
+      home: SplashScreen(),
     );
   }
 }
