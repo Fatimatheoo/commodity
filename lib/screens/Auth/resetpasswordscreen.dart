@@ -67,7 +67,7 @@ class _ResetScreenState extends State<ResetScreen> {
             const CustomButton(text: 'Submit'),
             SizedBox(
                 height: ScreenHeight(context)*0.3,
-                child: BottomContainer())
+                child: const BottomContainer())
           ],
         ),
       ),

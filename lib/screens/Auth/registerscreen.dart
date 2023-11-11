@@ -2,6 +2,7 @@ import 'package:commodity/reuseablewidgets/custombutton.dart';
 import 'package:commodity/reuseablewidgets/customcurvecontainer.dart';
 import 'package:commodity/reuseablewidgets/customtextfield.dart';
 import 'package:commodity/reuseablewidgets/passwordtextfield.dart';
+import 'package:commodity/screens/NavigationScreen.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/icons.dart';
 import 'package:commodity/utilitis/textstyles.dart';
@@ -83,15 +84,19 @@ class _RegisterscreenState extends State<Registerscreen> {
               ],
             ),
             VerticalGap(20),
-            const CustomButton(text: 'Register'),
+            CustomButton(text: 'Register',
+              ontap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> CustomNavigationBar()));
+              },
+            ),
             VerticalGap(10),
             CustomTextBox(text: 'Signin',
               account: 'Have an account?',
               ontap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const LoginScreen()));
               },
             ),
-            SizedBox(
+            const SizedBox(
                 height: 245,
                 child: BottomContainer())
           ]),

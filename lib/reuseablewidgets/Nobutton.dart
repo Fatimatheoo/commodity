@@ -5,20 +5,20 @@ import 'package:flutter/material.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import '../utilitis/sizes.dart';
 
-class CustomButtonContainer extends StatelessWidget {
-  const CustomButtonContainer({super.key, this.onTap,});
+class NoButton extends StatelessWidget {
+  const NoButton({super.key, this.onTap,});
   final VoidCallback? onTap;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
       child: Container(
-        width: ScreenWidth(context)*0.6,
-        height: 40,
+        width: 90,
+        height: 30,
         decoration: BoxDecoration(
           color: AppTheme.white,
           border: const GradientBoxBorder(
-            gradient: AppTheme.gradient
+              gradient: AppTheme.gradient
           ),
           borderRadius: BorderRadius.circular(10),
         ),
@@ -27,7 +27,7 @@ class CustomButtonContainer extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children:
           [
-            GradientText('Subscribe Now', gradient: AppTheme.gradient,style: T16textStyle,)
+            GradientText('No', gradient: AppTheme.gradient,style: T16textStyle,)
           ],
         ),
       ),

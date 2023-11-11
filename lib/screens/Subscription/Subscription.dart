@@ -35,7 +35,7 @@ class Subcription extends StatelessWidget {
                 border: Border.all(
                   color: AppTheme.secondarycolor,
                 ),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     color: AppTheme.rGB,
                     blurRadius: 5
@@ -56,9 +56,9 @@ class Subcription extends StatelessWidget {
                     style: T5textStyle,
                     ),
                   ),
-                  CustomSizeButton(text: '7 Days Free'),
+                  const CustomSizeButton(text: '7 Days Free'),
                   VerticalGap(10),
-                  CustomButtonContainer(),
+                  const CustomButtonContainer(),
                 ],
               ),
             ),

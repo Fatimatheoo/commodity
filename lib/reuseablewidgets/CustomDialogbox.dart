@@ -1,17 +1,12 @@
+import 'package:commodity/reuseablewidgets/Nobutton.dart';
+import 'package:commodity/reuseablewidgets/Yesbutton.dart';
 import 'package:commodity/utilitis/colors.dart';
 import 'package:commodity/utilitis/textstyles.dart';
 import 'package:flutter/material.dart';
 
 showAlertDialog(BuildContext context) {
 
-  // set up the button
-  Widget okButton = TextButton(
-    child: Text("OK"),
-    onPressed: () { },
-  );
-
-  // set up the AlertDialog
-  Widget alert = Container(
+  Widget alert = SizedBox(
     height: 185,
     width: 300,
     child: AlertDialog(
@@ -19,15 +14,29 @@ showAlertDialog(BuildContext context) {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10)
       ),
-      title: Center(child: Text("Do you want to cancel?",style: T24textStyle,)),
-      content: Center(child: Text("Lorem Ipsum is the printing and typesetting industry",style: T25textStyle,)),
+      title: Text("    Do you want to cancel?    ",style: T24textStyle,),
+      content: Text("       Lorem Ipsum is the printing and           "
+                    "          typesetting industry" ,style: T25textStyle,),
       actions: [
-        okButton,
+        Container(
+          width: 300,
+          height: 1,
+          color: AppTheme.rgb,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(14.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              NoButton(),
+              YesButton(text: 'Yes')
+            ],
+          ),
+        )
       ],
     ),
   );
 
-  // show the dialog
   showDialog(
     context: context,
     builder: (BuildContext context) {

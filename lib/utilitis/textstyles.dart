@@ -1,6 +1,6 @@
 import 'package:commodity/utilitis/colors.dart';
 import 'package:flutter/material.dart';
-TextStyle T10textStyle = TextStyle(fontFamily: 'Font2',fontSize: 12,fontStyle: FontStyle.normal,fontWeight: FontWeight.w500,color: AppTheme.lightblack);
+TextStyle T10textStyle = const TextStyle(fontFamily: 'Font2',fontSize: 12,fontStyle: FontStyle.normal,fontWeight: FontWeight.w500,color: AppTheme.lightblack);
 TextStyle T1textStyle = const TextStyle(fontSize: 20,fontStyle: FontStyle.normal,fontWeight: FontWeight.w700,fontFamily: 'Font2',color: AppTheme.Primarycolor);
 TextStyle T2textStyle = const TextStyle(fontSize: 14,fontStyle: FontStyle.normal,fontWeight: FontWeight.w900,fontFamily: 'Font1',color: AppTheme.black);
 TextStyle T3textStyle = const TextStyle(fontSize: 14,fontStyle: FontStyle.normal,fontWeight: FontWeight.w600,fontFamily: 'Font1',color: AppTheme.secondarycolor);
@@ -25,5 +25,11 @@ TextStyle T22textStyle = const TextStyle(fontSize: 20,fontStyle: FontStyle.norma
 TextStyle T23textStyle = const TextStyle(fontSize: 14,fontStyle: FontStyle.normal,fontWeight: FontWeight.w600,fontFamily: 'Font1',color: AppTheme.red);
 TextStyle T24textStyle = const TextStyle(fontSize: 18,fontStyle: FontStyle.normal,fontWeight: FontWeight.w500,fontFamily: 'Font1',color: AppTheme.lightblack);
 TextStyle T25textStyle = const TextStyle(fontSize: 12,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.lightblack);
+TextStyle T26textStyle = const TextStyle(fontSize: 15,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.lightblack);
+TextStyle T27textStyle = const TextStyle(fontSize: 16,fontStyle: FontStyle.normal,fontWeight: FontWeight.w500,fontFamily: 'Font1');
+TextStyle T28textStyle = const TextStyle(fontSize: 16,fontStyle: FontStyle.normal,fontWeight: FontWeight.w700,fontFamily: 'Font1',color: AppTheme.black);
+TextStyle T29textStyle = const TextStyle(fontSize: 13,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.Fontcolor);
+TextStyle T30textStyle = const TextStyle(fontSize: 12,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.green);
+//TextStyle T25textStyle = const TextStyle(fontSize: 12,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.lightblack);
 
 

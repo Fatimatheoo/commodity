@@ -1,25 +1,24 @@
 import 'package:commodity/utilitis/textstyles.dart';
 import 'package:flutter/material.dart';
-import '../utilitis/sizes.dart';
 
-class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.ontap,
+class YesButton extends StatelessWidget {
+  const YesButton({super.key, this.onTap,
     required this.text});
-  final VoidCallback? ontap;
+  final VoidCallback? onTap;
   final String text;
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: ontap,
+      onTap: onTap,
       child: Container(
-        width: ScreenWidth(context)*0.8,
-        height: 50,
+        width: 90,
+        height: 30,
         decoration: BoxDecoration(
           gradient: const LinearGradient(
-            colors: [
-              Color(0xff0ACCCA),
-              Color(0xff0080FF),
-            ]
+              colors: [
+                Color(0xff0ACCCA),
+                Color(0xff0080FF),
+              ]
           ),
           borderRadius: BorderRadius.circular(10),
         ),
@@ -28,8 +27,8 @@ class CustomButton extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              text,
-              style: T9textStyle)
+                text,
+                style: T9textStyle)
           ],
         ),
       ),

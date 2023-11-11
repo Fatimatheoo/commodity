@@ -1,6 +1,4 @@
-import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
-import 'dart:ui' as ui;
 
 import 'CustomPainter.dart';
 
@@ -12,7 +10,7 @@ class BottomContainer extends StatelessWidget {
     return Scaffold(
       body: ShaderMask(
              shaderCallback: (Rect bounds){
-               return LinearGradient(colors: [
+               return const LinearGradient(colors: [
                  Color(0xff0ACCCA),
                  Color(0xff0080FF),
                ]).createShader(bounds);

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../utilitis/sizes.dart';
 import '../utilitis/textstyles.dart';
@@ -15,10 +14,10 @@ final String account;
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('${account}',style: T2textStyle,),
+          Text(account,style: T2textStyle,),
           InkWell(
               onTap: ontap,
-              child: Text('${text}',style: T3textStyle,))
+              child: Text(text,style: T3textStyle,))
         ],
       ),
     );

@@ -1,9 +1,7 @@
-import 'package:commodity/reuseablewidgets/CustomDialogbox.dart';
 import 'package:commodity/reuseablewidgets/cancelcontainer.dart';
 import 'package:commodity/reuseablewidgets/lettercontainer.dart';
 import 'package:commodity/reuseablewidgets/subscriptionContainer.dart';
 import 'package:commodity/utilitis/gaps.dart';
-import 'package:commodity/utilitis/images.dart';
 import 'package:commodity/reuseablewidgets/listtile.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
@@ -26,28 +24,30 @@ class Profile extends StatelessWidget {
         centerTitle: true,
       ),
      body: Center(
-       child: Column(
-         children: [
-           VerticalGap(ScreenHeight(context)*0.04),
-           ProfileContainer(),
-           VerticalGap(ScreenHeight(context)*0.02),
-           SubscriptionContainer(),
-           VerticalGap(ScreenHeight(context)*0.03),
-           CancelContainer(),
-           VerticalGap(ScreenHeight(context)*0.02),
-           SizedBox(
-             height: ScreenHeight(context)*0.5,
-             width: ScreenWidth(context)*0.9,
-             child: ListView(
-               scrollDirection: Axis.vertical,
-               children: List.generate(customlist.length, (index) => Customlisttile(
-                   text: customlist[index].text,
-                   icon : customlist[index].icon,
-                   image: customlist[index].image,)
+       child: SingleChildScrollView(
+         child: Column(
+           children: [
+             VerticalGap(ScreenHeight(context)*0.04),
+             const ProfileContainer(),
+             VerticalGap(ScreenHeight(context)*0.02),
+             const SubscriptionContainer(),
+             VerticalGap(ScreenHeight(context)*0.03),
+             const CancelContainer(),
+             VerticalGap(ScreenHeight(context)*0.02),
+             SizedBox(
+               height: ScreenHeight(context)*0.5,
+               width: ScreenWidth(context)*0.9,
+               child: ListView(
+                 scrollDirection: Axis.vertical,
+                 children: List.generate(customlist.length, (index) => Customlisttile(
+                     text: customlist[index].text,
+                     icon : customlist[index].icon,
+                     image: customlist[index].image,)
+                 ),
                ),
              ),
-           ),
-         ],
+           ],
+         ),
        ),
      ),
     );

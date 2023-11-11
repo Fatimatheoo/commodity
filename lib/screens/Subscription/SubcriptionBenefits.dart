@@ -27,7 +27,7 @@ class SubcriptionBenefits extends StatelessWidget {
             child: Container(
               width: 200,
               height: 115,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(10),
                   bottomRight: Radius.circular(10)
@@ -50,17 +50,17 @@ class SubcriptionBenefits extends StatelessWidget {
               ],
             ),
           ),
-          CustomRow(),
+          const CustomRow(),
           VerticalGap(10),
-          CustomRow(),
+          const CustomRow(),
           VerticalGap(10),
-          CustomRow(),
+          const CustomRow(),
           VerticalGap(10),
-          CustomRow(),
+          const CustomRow(),
           VerticalGap(10),
-          CustomRow(),
+          const CustomRow(),
           VerticalGap(10),
-          CustomButton(text: 'Buy Now ')
+          const CustomButton(text: 'Buy Now ')
         ],
       ),
     );

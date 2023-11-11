@@ -4,8 +4,8 @@ class Custompainter extends CustomPainter{
 
     @override
     void paint(Canvas canvas, Size size) {
-    Paint paint_fill_0 = Paint()
-    ..color = Color(0xff0ACCCA)
+    Paint paintFill0 = Paint()
+    ..color = const Color(0xff0ACCCA)
     ..style = PaintingStyle.fill
     ..strokeWidth = size.width * 0.00
     ..strokeCap = StrokeCap.butt
@@ -20,7 +20,7 @@ class Custompainter extends CustomPainter{
     size.width * 0.7563583, size.height * 0.7832571, size.width * 0.9163167,
     size.height * 0.9943000);
 
-    canvas.drawPath(path_0, paint_fill_0,);
+    canvas.drawPath(path_0, paintFill0,);
     }
     @override
     bool shouldRepaint(covariant CustomPainter oldDelegate) {

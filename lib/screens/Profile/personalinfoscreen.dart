@@ -72,7 +72,7 @@ class _PersonalInformationState extends State<PersonalInformation> {
                   ),
                   obscuretext: passwordVisible),
               VerticalGap(ScreenHeight(context)*0.2),
-              CustomButton(text: 'Save')
+              const CustomButton(text: 'Save')
             ],
           ),
         ),

@@ -37,10 +37,10 @@ class ForgotPassworsScreen extends StatelessWidget {
             VerticalGap(ScreenHeight(context)*0.1),
              CustomButton(
                 text: 'Get OTP',
-            onTap: (){
+            ontap: (){
                   Navigator.push(context,MaterialPageRoute(builder: (context)=> const ResetScreen()));
             },),
-            SizedBox(
+            const SizedBox(
                 height: 245,
                 child: BottomContainer())
           ],

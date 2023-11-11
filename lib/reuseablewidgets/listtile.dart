@@ -1,5 +1,4 @@
-import 'package:commodity/screens/Profile/personalinfoscreen.dart';
-import 'package:commodity/utilitis/sizes.dart';
+
 import 'package:commodity/utilitis/textstyles.dart';
 import 'package:flutter/material.dart';
 

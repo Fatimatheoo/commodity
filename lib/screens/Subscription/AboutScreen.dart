@@ -1,7 +1,6 @@
 import 'package:commodity/reuseablewidgets/gradienttext.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/icons.dart';
-import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
 import '../../utilitis/colors.dart';
 import '../../utilitis/textstyles.dart';
@@ -29,7 +28,7 @@ class AboutScreen extends StatelessWidget {
                 GradientText(
                     'About Commodity Alert Pro',
                     style: T18textStyle,
-                    gradient: LinearGradient(
+                    gradient: const LinearGradient(
                       colors: [
                         Color(0xff0080FF),
                         Color(0xff0ACCCA),

@@ -77,10 +77,10 @@ class _LoginScreenState extends State<LoginScreen> {
            CustomTextBox(text: 'Register Now',
            account: 'Dont have an account?',
            ontap: (){
-             Navigator.push(context, MaterialPageRoute(builder: (context)=> Registerscreen()));
+             Navigator.push(context, MaterialPageRoute(builder: (context)=> const Registerscreen()));
            },
            ),
-        SizedBox(
+        const SizedBox(
             height: 245,
             child: BottomContainer())
           ],

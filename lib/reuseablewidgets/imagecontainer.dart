@@ -8,7 +8,7 @@ class ImageContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final AssetImage logo = const AssetImage('assets/images/logo.png');
+    const AssetImage logo = AssetImage('assets/images/logo.png');
     return ImagePixels.container(
       imageProvider: logo,
       child: Container(
@@ -22,7 +22,7 @@ class ImageContainer extends StatelessWidget {
                   color: AppTheme.secondarycolor
               )
           ),
-          child: Image(image: logo,)),
+          child: const Image(image: logo,)),
     );
   }
 }

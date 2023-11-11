@@ -52,10 +52,10 @@ class _SplashScreenState extends State<SplashScreen> {
                )
               ),
             VerticalGap(ScreenHeight(context)*0.2),
-            Center(
+            const Center(
               child: ImageContainer()
               ),
-            Expanded(child: BottomContainer())
+            const Expanded(child: BottomContainer())
           ]),
     );
   }
