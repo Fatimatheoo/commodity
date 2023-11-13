@@ -1,3 +1,4 @@
+import 'package:commodity/provider/registerprovider.dart';
 import 'package:commodity/reuseablewidgets/custombutton.dart';
 import 'package:commodity/reuseablewidgets/customcurvecontainer.dart';
 import 'package:commodity/reuseablewidgets/customtextfield.dart';
@@ -7,6 +8,7 @@ import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/icons.dart';
 import 'package:commodity/utilitis/textstyles.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../../reuseablewidgets/customtextbox.dart';
 import '../../utilitis/colors.dart';
 import '../../reuseablewidgets/CustomBottomcontainer.dart';
@@ -27,6 +29,7 @@ bool passwordVisible = false;
 class _RegisterscreenState extends State<Registerscreen> {
   @override
   Widget build(BuildContext context) {
+    final authProvider = Provider.of<SignUpProvider>(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -86,7 +89,11 @@ class _RegisterscreenState extends State<Registerscreen> {
             VerticalGap(20),
             CustomButton(text: 'Register',
               ontap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> CustomNavigationBar()));
+                 authProvider.RegisterUser(context,
+                     emailcontroller.text.trim(),
+                     passwordcontroller.text.trim(),
+                     namecontroller.text.trim()
+                 );
               },
             ),
             VerticalGap(10),

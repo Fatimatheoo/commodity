@@ -9,8 +9,11 @@ import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/icons.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:commodity/utilitis/textstyles.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../provider/SigninProvider.dart';
 import '../../utilitis/colors.dart';
 import '../../reuseablewidgets/CustomBottomcontainer.dart';
 
@@ -24,6 +27,8 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
+    User? currentUser = FirebaseAuth.instance.currentUser;
+    final authProvider = Provider.of<SigninProvider>(context);
     bool passwordVisible = false;
     var emailcontroller = TextEditingController();
     var passwordcontroller = TextEditingController();
@@ -72,7 +77,13 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
         VerticalGap(ScreenHeight(context)*0.04),
-        const CustomButton(text: 'Login'),
+            CustomButton(text: 'Login',
+          ontap: (){
+            authProvider.SigninUser(
+                context,
+                emailcontroller.text.trim(),
+                passwordcontroller.text.trim());
+          },),
         VerticalGap(ScreenHeight(context)*0.04),
            CustomTextBox(text: 'Register Now',
            account: 'Dont have an account?',

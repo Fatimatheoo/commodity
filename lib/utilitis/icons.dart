@@ -16,6 +16,6 @@ class AppIcons{
   static const String star = 'assets/icons/star.png';
   static const String bell = 'assets/icons/bell.png';
   static const String Arrow = 'assets/icons/arrow.png';
-
-
+  static const String usoil = 'assets/icons/smallusoil.png';
+  static const String tesla = 'assets/icons/threestar.png';
 }

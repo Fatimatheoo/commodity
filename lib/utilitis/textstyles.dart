@@ -30,6 +30,8 @@ TextStyle T27textStyle = const TextStyle(fontSize: 16,fontStyle: FontStyle.norma
 TextStyle T28textStyle = const TextStyle(fontSize: 16,fontStyle: FontStyle.normal,fontWeight: FontWeight.w700,fontFamily: 'Font1',color: AppTheme.black);
 TextStyle T29textStyle = const TextStyle(fontSize: 13,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.Fontcolor);
 TextStyle T30textStyle = const TextStyle(fontSize: 12,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.green);
-//TextStyle T25textStyle = const TextStyle(fontSize: 12,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.lightblack);
+TextStyle T31textStyle = const TextStyle(fontSize: 9,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.RGB);
+TextStyle T32textStyle = const TextStyle(fontSize: 12,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.lightblack);
+
 
 
