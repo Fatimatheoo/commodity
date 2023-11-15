@@ -6,15 +6,17 @@ import '../utilitis/sizes.dart';
 import '../utilitis/textstyles.dart';
 
 class NotificationContainer extends StatelessWidget {
-  const NotificationContainer({super.key, required this.notificationModel, this.ontap});
+  const NotificationContainer({super.key, required this.notificationModel, this.ontap, this.onDelete});
 
   final NotificationModel notificationModel;
   final VoidCallback? ontap;
+  final VoidCallback? onDelete;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: ontap,
+      onLongPress: onDelete,
       child: Container(
         width: ScreenWidth(context)*0.9,
         child: Row(

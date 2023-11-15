@@ -8,7 +8,7 @@ Future<List<NotificationModel>> getNotificationData() async {
       notification.add(NotificationModel(
           text: value.docs[i].data()['text'],
           image: value.docs[i].data()['image'],
-          date: value.docs[i].data()['date']));
+          date: value.docs[i].data()['time']));
     }
     return notification;
   });

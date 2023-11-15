@@ -14,7 +14,7 @@ class SignUpProvider with ChangeNotifier{
         password : userpassword
       );
     print('User cREATED');
-    SignUpUser( useremail, userpassword,username).then((value) =>
+    SignUpUser( useremail,username).then((value) =>
         Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen())));
   }
 }

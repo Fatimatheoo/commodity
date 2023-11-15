@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 Future SignUpUser(
     String username,
     String useremail,
-    String userpassword
     ) async{
   User? userid = FirebaseAuth.instance.currentUser;
 

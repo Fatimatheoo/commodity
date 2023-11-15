@@ -28,23 +28,25 @@ class AddCommodity extends StatelessWidget {
         title: Text('Add Commodity',style : T11textStyle),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          VerticalGap(ScreenHeight(context)*0.03),
-          SearchTextfield(textEditingController: searchcontroller),
-          VerticalGap(ScreenHeight(context)*0.02),
-          SizedBox(
-            height: 600,
-            child: ListView(
-              scrollDirection: Axis.vertical,
-              children: List.generate(
-                  commodity.length, (index) => CommodityAddContainer(
-                commodity :  commodity[index],
-                ontap: (){},
-              )),
-            ),
-          )
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            VerticalGap(ScreenHeight(context)*0.03),
+            SearchTextfield(textEditingController: searchcontroller),
+            VerticalGap(ScreenHeight(context)*0.02),
+            SizedBox(
+              height: 600,
+              child: ListView(
+                scrollDirection: Axis.vertical,
+                children: List.generate(
+                    commodity.length, (index) => CommodityAddContainer(
+                  commodity :  commodity[index],
+                  ontap: (){},
+                )),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

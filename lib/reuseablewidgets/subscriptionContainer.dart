@@ -1,3 +1,4 @@
+import 'package:commodity/utilitis/gaps.dart';
 import 'package:flutter/material.dart';
 import '../utilitis/colors.dart';
 import '../utilitis/images.dart';
@@ -42,6 +43,7 @@ class SubscriptionContainer extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text('Subscription (1 Month)',style: T20textStyle,),
+                    HorizontalGap(ScreenWidth(context)*0.1),
                     Text('\$ 7',style: T22textStyle,)
                   ],
                 ),
