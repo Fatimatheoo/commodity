@@ -1,6 +1,6 @@
+import 'package:commodity/reuseablewidgets/customscreennavigator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import '../screens/NavigationScreen.dart';
 
 class SigninProvider with ChangeNotifier{
 
@@ -21,7 +21,7 @@ class SigninProvider with ChangeNotifier{
               email: useremail,
               password: userpassword)).user;
       if (firebaseUser != null) {
-        Navigator.push(context, MaterialPageRoute(builder: (context)=> CustomNavigationBar()));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> ScreenNavigator()));
       } else {
         updateloading(true);
         print('Check your email');

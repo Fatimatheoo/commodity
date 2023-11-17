@@ -3,7 +3,6 @@ import 'package:commodity/reuseablewidgets/custombutton.dart';
 import 'package:commodity/reuseablewidgets/customcurvecontainer.dart';
 import 'package:commodity/reuseablewidgets/customtextfield.dart';
 import 'package:commodity/reuseablewidgets/passwordtextfield.dart';
-import 'package:commodity/screens/NavigationScreen.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/icons.dart';
 import 'package:commodity/utilitis/textstyles.dart';

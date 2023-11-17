@@ -1,7 +1,7 @@
-import 'package:commodity/repository/deletenotifications.dart';
+
 import 'package:commodity/repository/getnotfications.dart';
 import 'package:commodity/reuseablewidgets/NotificationContainer.dart';
-import 'package:commodity/screens/NavigationScreen.dart';
+import 'package:commodity/reuseablewidgets/customscreennavigator.dart';
 import 'package:flutter/material.dart';
 import '../model/Notificationmodel.dart';
 import '../utilitis/colors.dart';
@@ -37,7 +37,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
         backgroundColor: AppTheme.white,
         leading: InkWell(
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> CustomNavigationBar()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> ScreenNavigator()));
             },
             child: Image.asset(AppIcons.icon)),
         title: Text('Notifications',style : T11textStyle),
@@ -63,7 +63,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                               (index) => NotificationContainer(
                               notificationModel: snapshot.data![index],
                               onDelete: (){
-                               DeleteNotifications(snapshot.data!);
+                              // DeleteNotifications(snapshot.data!);
                                 //delete(snapshot.data![index]);
                               },
                               ))

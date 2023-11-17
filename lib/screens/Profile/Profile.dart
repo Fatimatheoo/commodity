@@ -17,8 +17,6 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation:1,
-        bottomOpacity: 0.6,
         backgroundColor: AppTheme.white,
         title: Text('Profile',style : T11textStyle),
         centerTitle: true,

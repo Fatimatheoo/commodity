@@ -24,7 +24,7 @@ class NotificationContainer extends StatelessWidget {
             SizedBox(
               width: 40,
               height: 40,
-              child: CircleAvatar(backgroundColor:AppTheme.gray,child: Image.asset('${notificationModel.image}'),),
+              child: CircleAvatar(backgroundColor:AppTheme.gray,child: Image.network('${notificationModel.image}'),),
             ),
             HorizontalGap(10),
             Column(

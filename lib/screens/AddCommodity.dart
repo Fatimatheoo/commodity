@@ -1,6 +1,6 @@
 import 'package:commodity/reuseablewidgets/AddCommoditycontainer.dart';
+import 'package:commodity/reuseablewidgets/customscreennavigator.dart';
 import 'package:commodity/reuseablewidgets/searchtextfield.dart';
-import 'package:commodity/screens/NavigationScreen.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,7 @@ class AddCommodity extends StatelessWidget {
         backgroundColor: AppTheme.white,
         leading : InkWell(
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> CustomNavigationBar()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> ScreenNavigator()));
             },
             child: Image.asset(AppIcons.icon)),
         title: Text('Add Commodity',style : T11textStyle),
