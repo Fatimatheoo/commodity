@@ -7,6 +7,7 @@ import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/images.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:provider/provider.dart';
 import '../reuseablewidgets/CommodityContainer.dart';
 import '../utilitis/colors.dart';
@@ -96,14 +97,26 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             SizedBox(
               height: 600,
-              child: ListView(
+              child: (commodity.isEmpty) ? Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(Icons.hourglass_empty_rounded,color: AppTheme.Rgb,),
+                  Text('STOCK IS EMPTY', style: T5textStyle,)
+                ],
+              ) :ListView(
                 scrollDirection: Axis.vertical,
                 children: List.generate(
                     commodity.length, (index) => CommodityContainer(
                   commodity :  commodity[index],
                   ontap: (){},
+                  onpressed: (context){
+                    setState(() {
+                      commodity.removeAt(index);
+                    });
+                  },
                 )),
-              ),
+              ) ,
             )
           ],
         ),

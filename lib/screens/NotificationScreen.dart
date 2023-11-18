@@ -1,5 +1,6 @@
 
 import 'package:commodity/repository/getnotfications.dart';
+import 'package:commodity/reuseablewidgets/CheckboxListTile.dart';
 import 'package:commodity/reuseablewidgets/NotificationContainer.dart';
 import 'package:commodity/reuseablewidgets/customscreennavigator.dart';
 import 'package:flutter/material.dart';
@@ -15,17 +16,7 @@ class NotificationScreen extends StatefulWidget {
   @override
   State<NotificationScreen> createState() => _NotificationScreenState();
 }
-bool selectAll = false;
-List<NotificationModel> items = [];
-
-void onSelectAllTap(){
-  if(selectAll){
-    items.clear();
-  }
-  else {
-    items = List.from(items);
-  }
-}
+bool _value = false;
 
 class _NotificationScreenState extends State<NotificationScreen> {
   @override
@@ -43,9 +34,6 @@ class _NotificationScreenState extends State<NotificationScreen> {
         title: Text('Notifications',style : T11textStyle),
         actions: [
           InkWell(
-              onTap: (){
-                onSelectAllTap();
-              },
               child: Image.asset(AppImages.deleteicon))
         ],
         centerTitle: true,
@@ -61,12 +49,8 @@ class _NotificationScreenState extends State<NotificationScreen> {
                         children : List.generate(
                         snapshot.data!.length,
                               (index) => NotificationContainer(
-                              notificationModel: snapshot.data![index],
-                              onDelete: (){
-                              // DeleteNotifications(snapshot.data!);
-                                //delete(snapshot.data![index]);
-                              },
-                              ))
+                                  visible: true,
+                                  notificationModel: snapshot.data![index]))
                     );
                   }
                   else {

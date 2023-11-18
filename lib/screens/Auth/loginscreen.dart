@@ -12,7 +12,6 @@ import 'package:commodity/utilitis/textstyles.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../../provider/SigninProvider.dart';
 import '../../utilitis/colors.dart';
 import '../../reuseablewidgets/CustomBottomcontainer.dart';
@@ -50,9 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
             textEditingController: passwordcontroller,
             obscuretext: passwordVisible,
             suffixIcon: IconButton(
-               icon: Icon(passwordVisible
-               ? Icons.remove_red_eye_outlined
-               : Icons.visibility_off,
+               icon: Icon(passwordVisible ? Icons.remove_red_eye_outlined : Icons.visibility_off,
                color: AppTheme.Rgb),
               onPressed: (){
                  setState(() {
