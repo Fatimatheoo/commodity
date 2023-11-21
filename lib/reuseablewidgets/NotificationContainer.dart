@@ -15,7 +15,7 @@ class NotificationContainer extends StatelessWidget {
   final bool visible;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return InkWell(
       onTap: ontap,
       onLongPress: onDelete,
@@ -28,7 +28,8 @@ class NotificationContainer extends StatelessWidget {
               child: SizedBox(
                   width: 40,
                   height: 40,
-                  child: Customcheckbox()),
+                  child: Customcheckbox()
+              ),
             ),
             SizedBox(
               width: 40,

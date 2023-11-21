@@ -23,14 +23,14 @@ class LoginScreen extends StatefulWidget {
   State<LoginScreen> createState() => _LoginScreenState();
 }
 
+var emailcontroller = TextEditingController();
+var passwordcontroller = TextEditingController();
+bool passwordvisible = false;
+
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    User? currentUser = FirebaseAuth.instance.currentUser;
     final authProvider = Provider.of<SigninProvider>(context);
-    bool passwordVisible = false;
-    var emailcontroller = TextEditingController();
-    var passwordcontroller = TextEditingController();
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(

@@ -6,9 +6,11 @@ Future<List<NotificationModel>> getNotificationData() async {
   return await FirebaseFirestore.instance.collection('Notifications').get().then((value) {
     for(int i = 0; i < value.docs.length; i++ ){
       notification.add(NotificationModel(
+        id : value.docs[i].data()['ID'],
           text: value.docs[i].data()['text'],
           image: value.docs[i].data()['image'],
-          date: value.docs[i].data()['time']));
+          date: value.docs[i].data()['time'],
+      ));
     }
     return notification;
   });

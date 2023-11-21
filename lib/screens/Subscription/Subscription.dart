@@ -1,6 +1,9 @@
 import 'package:commodity/reuseablewidgets/custombuttoncontainer.dart';
+import 'package:commodity/reuseablewidgets/customscreennavigator.dart';
 import 'package:commodity/reuseablewidgets/customsizebutton.dart';
 import 'package:commodity/reuseablewidgets/gradienttext.dart';
+import 'package:commodity/screens/Profile/Profile.dart';
+import 'package:commodity/screens/Subscription/SubcriptionBenefits.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/images.dart';
 import 'package:commodity/utilitis/sizes.dart';
@@ -9,8 +12,8 @@ import '../../utilitis/colors.dart';
 import '../../utilitis/icons.dart';
 import '../../utilitis/textstyles.dart';
 
-class Subcription extends StatelessWidget {
-  const Subcription({super.key});
+class SubcriptionScreen extends StatelessWidget {
+  const SubcriptionScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +21,11 @@ class Subcription extends StatelessWidget {
       backgroundColor: AppTheme.white,
       appBar: AppBar(
         backgroundColor: AppTheme.white,
-        leading : Image.asset(AppIcons.icon),
+        leading : InkWell(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> ScreenNavigator()));
+            },
+            child: Image.asset(AppIcons.icon)),
         title: Text('Subscription',style : T11textStyle),
         centerTitle: true,
       ),
@@ -58,7 +65,11 @@ class Subcription extends StatelessWidget {
                   ),
                   const CustomSizeButton(text: '7 Days Free'),
                   VerticalGap(10),
-                  const CustomButtonContainer(),
+                  CustomButtonContainer(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> SubcriptionBenefits()));
+                    },
+                  ),
                 ],
               ),
             ),

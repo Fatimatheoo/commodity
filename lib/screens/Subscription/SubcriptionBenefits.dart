@@ -1,7 +1,10 @@
 import 'package:commodity/reuseablewidgets/CustomRow.dart';
 import 'package:commodity/reuseablewidgets/custombutton.dart';
 import 'package:commodity/reuseablewidgets/gradienttext.dart';
+import 'package:commodity/screens/Subscription/AboutScreen.dart';
+import 'package:commodity/screens/Subscription/Subscription.dart';
 import 'package:commodity/utilitis/gaps.dart';
+import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
 import '../../utilitis/colors.dart';
 import '../../utilitis/icons.dart';
@@ -14,10 +17,12 @@ class SubcriptionBenefits extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation:1,
-        bottomOpacity: 0.6,
         backgroundColor: AppTheme.white,
-        leading : Image.asset(AppIcons.icon),
+        leading : InkWell(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> SubcriptionScreen()));
+            },
+            child: Image.asset(AppIcons.icon)),
         title: Text('Subscription Benefits',style : T11textStyle),
         centerTitle: true,
       ),
@@ -42,6 +47,7 @@ class SubcriptionBenefits extends StatelessWidget {
               ),
             ),
           ),
+          VerticalGap(ScreenHeight(context)*0.05),
           Container(
             child: Column(
               children: [
@@ -50,7 +56,12 @@ class SubcriptionBenefits extends StatelessWidget {
               ],
             ),
           ),
-          const CustomRow(),
+          VerticalGap(ScreenHeight(context)*0.04),
+           CustomRow(
+            ontap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> AboutScreen()));
+            },
+          ),
           VerticalGap(10),
           const CustomRow(),
           VerticalGap(10),
@@ -59,7 +70,7 @@ class SubcriptionBenefits extends StatelessWidget {
           const CustomRow(),
           VerticalGap(10),
           const CustomRow(),
-          VerticalGap(10),
+          VerticalGap(20),
           const CustomButton(text: 'Buy Now ')
         ],
       ),

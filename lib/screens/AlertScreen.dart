@@ -4,7 +4,9 @@ import 'package:commodity/reuseablewidgets/searchtextfield.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
+import '../reuseablewidgets/customscreennavigator.dart';
 import '../utilitis/colors.dart';
+import '../utilitis/icons.dart';
 import '../utilitis/textstyles.dart';
 
 class AlertScreen extends StatelessWidget {
@@ -15,6 +17,11 @@ class AlertScreen extends StatelessWidget {
     var searchcontroller = TextEditingController();
     return Scaffold(
       appBar: AppBar(
+        leading : InkWell(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> ScreenNavigator()));
+            },
+            child: Image.asset(AppIcons.icon)),
         backgroundColor: AppTheme.white,
         title: Text('Commodity Alert',style : T11textStyle),
         centerTitle: true,

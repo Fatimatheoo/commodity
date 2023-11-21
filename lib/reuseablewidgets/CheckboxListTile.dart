@@ -19,7 +19,7 @@ class _CustomcheckboxState extends State<Customcheckbox> {
     return Container(
       width: ScreenWidth(context)*0.9,
       child: CheckboxListTile(
-        checkColor: AppTheme.lightblack,
+       checkColor: AppTheme.lightblack,
           value: check,
           onChanged: (bool ? value){
             setState(() {

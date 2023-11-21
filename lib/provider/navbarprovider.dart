@@ -9,7 +9,7 @@ class Navbarprovider with ChangeNotifier{
   final List<Widget> _screens = [
     const HomeScreen(),
     const AlertScreen(),
-    const Profile()
+     Profile()
   ];
 
   set currentTab(var tab){_currentTab = tab;notifyListeners();}

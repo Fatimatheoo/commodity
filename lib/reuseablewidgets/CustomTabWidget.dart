@@ -19,7 +19,7 @@ class TabWidget extends StatelessWidget {
           Padding(
               padding: EdgeInsets.symmetric(horizontal: 10),
           child: Container(
-            width: 84,
+            constraints: BoxConstraints(maxWidth: 84,minWidth: 54),
             height: 30,
             decoration: selected? nongradient : border,
             child: Center(

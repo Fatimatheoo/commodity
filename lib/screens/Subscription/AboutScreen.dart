@@ -1,4 +1,5 @@
 import 'package:commodity/reuseablewidgets/gradienttext.dart';
+import 'package:commodity/screens/Subscription/SubcriptionBenefits.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/icons.dart';
 import 'package:flutter/material.dart';
@@ -12,10 +13,12 @@ class AboutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation:1,
-        bottomOpacity: 0.6,
         backgroundColor: AppTheme.white,
-        leading : Image.asset(AppIcons.icon),
+        leading : InkWell(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> SubcriptionBenefits()));
+            },
+            child: Image.asset(AppIcons.icon)),
         title: Text('About',style : T11textStyle),
         centerTitle: true,
       ),

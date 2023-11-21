@@ -1,6 +1,8 @@
 import 'package:commodity/reuseablewidgets/custombutton.dart';
+import 'package:commodity/reuseablewidgets/customscreennavigator.dart';
 import 'package:commodity/reuseablewidgets/customtextfield.dart';
 import 'package:commodity/reuseablewidgets/passwordtextfield.dart';
+import 'package:commodity/screens/Profile/Profile.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
@@ -27,10 +29,12 @@ class _PersonalInformationState extends State<PersonalInformation> {
     bool passwordVisible = false;
     return Scaffold(
       appBar: AppBar(
-        elevation:1,
-        bottomOpacity: 0.6,
         backgroundColor: AppTheme.white,
-        leading : Image.asset(AppIcons.icon),
+        leading : InkWell(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> ScreenNavigator()));
+            },
+            child: Image.asset(AppIcons.icon)),
         title: Text('Personal Information',style : T11textStyle),
         centerTitle: true,
       ),
@@ -43,8 +47,8 @@ class _PersonalInformationState extends State<PersonalInformation> {
                CustomTextField(text: 'Hafiz Ahmad', textEditingController: namecontroller, prefixIcon: Image.asset(AppIcons.person)),
               VerticalGap(10),
                CustomTextField(text: '0324 4925348', textEditingController: emailcontroller, prefixIcon: Image.asset(AppIcons.email)),
-             VerticalGap(10),
-              PasswordTextfield(text: '**********', textEditingController: passwordcontroller,
+              VerticalGap(10),
+               PasswordTextfield(text: '**********', textEditingController: passwordcontroller,
                   suffixIcon: IconButton(
                     icon: Icon(passwordVisible
                         ? Icons.remove_red_eye_outlined
