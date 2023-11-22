@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../utilitis/colors.dart';
 import '../utilitis/sizes.dart';
 import '../utilitis/textstyles.dart';
@@ -21,9 +20,14 @@ class CancelContainer extends StatelessWidget {
               width: 1
           )
       ),
-      child: Center(child: InkWell(
+      child: Center(
+          child: InkWell(
           onTap: (){
-            showAlertDialog(context);
+            showAlertDialog(
+              context,
+                (){},
+                (){}
+            );
           },
           child: Text('Cancel Subscription',style: T23textStyle))),
     );

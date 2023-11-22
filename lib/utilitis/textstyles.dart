@@ -32,6 +32,12 @@ TextStyle T29textStyle = const TextStyle(fontSize: 13,fontStyle: FontStyle.norma
 TextStyle T30textStyle = const TextStyle(fontSize: 12,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.green);
 TextStyle T31textStyle = const TextStyle(fontSize: 9,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.RGB);
 TextStyle T32textStyle = const TextStyle(fontSize: 12,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.lightblack);
+TextStyle T33textStyle = const TextStyle(fontSize: 20,fontStyle: FontStyle.normal,fontWeight: FontWeight.w500,fontFamily: 'Font2');
+TextStyle T34textStyle = const TextStyle(fontSize: 15,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.rgb);
+TextStyle T35textStyle = const TextStyle(fontSize: 30,fontStyle: FontStyle.normal,fontWeight: FontWeight.w600,fontFamily: 'Font1',color: AppTheme.lightblack);
+TextStyle T36textStyle = const TextStyle(fontSize: 16,fontStyle: FontStyle.normal,fontWeight: FontWeight.w500,fontFamily: 'Font1',color: AppTheme.green);
+//TextStyle T32textStyle = const TextStyle(fontSize: 12,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.lightblack);
+//TextStyle T32textStyle = const TextStyle(fontSize: 12,fontStyle: FontStyle.normal,fontWeight: FontWeight.w400,fontFamily: 'Font1',color: AppTheme.lightblack);
 
 
 

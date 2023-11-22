@@ -4,7 +4,7 @@ import 'package:commodity/utilitis/colors.dart';
 import 'package:commodity/utilitis/textstyles.dart';
 import 'package:flutter/material.dart';
 
-showAlertDialog(BuildContext context) {
+showAlertDialog(BuildContext context,VoidCallback ontap,VoidCallback onyestap ) {
 
   Widget alert = SizedBox(
     height: 185,
@@ -28,8 +28,13 @@ showAlertDialog(BuildContext context) {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              NoButton(),
-              YesButton(text: 'Yes')
+              NoButton(
+                onTap: ontap,
+              ),
+              YesButton(
+                text: 'Yes',
+              onTap: onyestap,
+              )
             ],
           ),
         )

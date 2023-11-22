@@ -1,4 +1,5 @@
 import 'package:commodity/repository/getnotfications.dart';
+import 'package:commodity/reuseablewidgets/CustomDialogbox.dart';
 import 'package:commodity/reuseablewidgets/customscreennavigator.dart';
 import 'package:commodity/reuseablewidgets/notificationcheckbox.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,6 @@ bool _isCheckboxVisible = false;
 bool _isSelectAllChecked = false;
 List<bool> _checkboxStates = List.generate(2, (index) => false);
 
-
 class _NotificationScreenState extends State<NotificationScreen> {
   @override
   Widget build(BuildContext context) {
@@ -36,20 +36,22 @@ class _NotificationScreenState extends State<NotificationScreen> {
         actions: [
           InkWell(
             onTap: (){
-              setState(() {
-                _isCheckboxVisible = !_isCheckboxVisible;
-              });
+              showAlertDialog(
+                  context,
+                  (){},
+                  (){}
+              );
             },
               child: Image.asset(AppImages.deleteicon))
         ],
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-            children: [
-              Visibility(
-                visible: _isCheckboxVisible,
+      body: Column(
+          children: [
+            Visibility(
+              visible: _isCheckboxVisible,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -67,34 +69,39 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   ],
                 ),
               ),
-              VerticalGap(ScreenHeight(context)*0.1),
-              FutureBuilder(
-                  future : getNotificationData(),
-                  builder: (context , snapshot) {
-                    if(snapshot.hasData){
-                      return Column(
-                          children : List.generate(
-                          snapshot.data!.length,
-                                (index) =>  CheckboxContainer(
-                                    visible: _isCheckboxVisible,
-                                    notificationModel: snapshot.data![index],
-                                    value: _checkboxStates[index],
-                                    onchanged: (bool?value){
-                                      setState(() {
-                                        _checkboxStates[index] = value!;
-                                      });
-                                    },
-                                ),
-                          )
-                      );
-                    }
-                    else {
-                      return Text('${snapshot.data}');
-                    }
-                  } )
-            ],
-          ),
-      ),
+            ),
+            VerticalGap(ScreenHeight(context)*0.03),
+            FutureBuilder(
+                future : getNotificationData(),
+                builder: (context , snapshot) {
+                  if(snapshot.hasData){
+                    return Column(
+                        children : List.generate(
+                        snapshot.data!.length,
+                              (index) =>  CheckboxContainer(
+                                onLongPress: (){
+                                  setState(() {
+                                    _isCheckboxVisible = !_isCheckboxVisible;
+                                  });
+                                },
+                                  visible: _isCheckboxVisible,
+                                  notificationModel: snapshot.data![index],
+                                  value: _checkboxStates[index],
+                                  onchanged: (bool?value){
+                                    setState(() {
+                                      _checkboxStates[index] = value!;
+                                    });
+                                  },
+                              ),
+                        )
+                    );
+                  }
+                  else {
+                    return Text('${snapshot.data}');
+                  }
+                })
+          ],
+        ),
       );
   }
 }

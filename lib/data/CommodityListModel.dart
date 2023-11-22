@@ -11,4 +11,4 @@ List<Commodity> commodity = [
 
 ];
 
-List<NotificationModel> selecteditems = [];
+//List<NotificationModel> selecteditems = [];

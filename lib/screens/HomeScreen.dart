@@ -1,13 +1,16 @@
 import 'package:commodity/data/CommodityListModel.dart';
 import 'package:commodity/data/Tabtext.dart';
 import 'package:commodity/provider/UserProvider.dart';
+import 'package:commodity/reuseablewidgets/Bottommodalsheet.dart';
 import 'package:commodity/reuseablewidgets/CustomTabWidget.dart';
+import 'package:commodity/reuseablewidgets/gradienttext.dart';
 import 'package:commodity/reuseablewidgets/searchtextfield.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/images.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:provider/provider.dart';
 import '../reuseablewidgets/CommodityContainer.dart';
 import '../utilitis/colors.dart';
@@ -109,7 +112,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: List.generate(
                     commodity.length, (index) => CommodityContainer(
                   commodity :  commodity[index],
-                  ontap: (){},
+                  ontap: (){
+                    showModalBottomSheet(
+                        context: context,
+                        builder: (BuildContext context){
+                          return BottomModalheet();
+                        });
+                  },
                   onpressed: (context){
                     setState(() {
                       commodity.removeAt(index);

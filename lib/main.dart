@@ -2,7 +2,6 @@ import 'package:commodity/provider/SigninProvider.dart';
 import 'package:commodity/provider/UserProvider.dart';
 import 'package:commodity/provider/navbarprovider.dart';
 import 'package:commodity/provider/registerprovider.dart';
-import 'package:commodity/reuseablewidgets/hidecheckbox.dart';
 import 'package:commodity/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
