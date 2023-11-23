@@ -5,6 +5,7 @@ import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
 import '../utilitis/colors.dart';
+import '../utilitis/images.dart';
 import 'Auth/loginscreen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -33,30 +34,17 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.white,
-      body: Column(
-          children : [
-            Container(
-              width: 440,
-              height: ScreenHeight(context)*0.2,
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  colors: [
-                    Color(0xff0ACCCA),
-                    Color(0xff0080FF),
-                  ]
-                ),
-              borderRadius: BorderRadius.vertical(
-                bottom: Radius.elliptical(MediaQuery.of(context).size.height,440.0)
-              )
-               )
-              ),
-            VerticalGap(ScreenHeight(context)*0.2),
-            const Center(
-              child: ImageContainer()
-              ),
-            const Expanded(child: BottomContainer())
-          ]),
+      body: Container(
+        width: ScreenWidth(context),
+        height: ScreenHeight(context),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(AppImages.splash),
+              fit: BoxFit.fill
+          )
+        ),
+        child: Center(child: ImageContainer()),
+      ),
     );
   }
 }

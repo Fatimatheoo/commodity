@@ -1,4 +1,7 @@
 class AppIcons{
+  static const String activebell = 'assets/icons/activebell.png';
+  static const String activeaccount = 'assets/icons/activeaccount.png';
+  static const String activehome = 'assets/icons/activehome.png';
   static const String arrow = 'assets/icons/arrowleft.png';
   static const String email = 'assets/icons/email.png';
   static const String eye = 'assets/icons/invisible.png';

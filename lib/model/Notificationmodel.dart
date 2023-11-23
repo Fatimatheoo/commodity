@@ -1,6 +1,6 @@
 class NotificationModel{
 
-  NotificationModel( {required this.id, required this.text,
+  NotificationModel({required this.id, required this.text,
   required this.image,
    required this.date });
   final String text;

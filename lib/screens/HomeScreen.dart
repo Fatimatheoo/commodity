@@ -3,14 +3,12 @@ import 'package:commodity/data/Tabtext.dart';
 import 'package:commodity/provider/UserProvider.dart';
 import 'package:commodity/reuseablewidgets/Bottommodalsheet.dart';
 import 'package:commodity/reuseablewidgets/CustomTabWidget.dart';
-import 'package:commodity/reuseablewidgets/gradienttext.dart';
+import 'package:commodity/reuseablewidgets/TabWidget.dart';
 import 'package:commodity/reuseablewidgets/searchtextfield.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/images.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:provider/provider.dart';
 import '../reuseablewidgets/CommodityContainer.dart';
 import '../utilitis/colors.dart';
@@ -56,20 +54,47 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             SearchTextfield(textEditingController: searchcontroller),
             VerticalGap(10),
-            SizedBox(
-              height: ScreenHeight(context)*0.06,
-              width: double.infinity,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: List.generate(tabtext.length, (index) => TabWidget(
-                    selected: _selectedType == index,
-                    ontap: (){
-                      _selectedType = index;
-                      setState(() {});
-                    },
-                    text: tabtext[index])),
-              ),
-            ),
+            DefaultTabController(
+                length: 5,
+                initialIndex: 0,
+                child: Column(
+                  children : [
+                    Container(
+                      child: TabBar(
+                        isScrollable: true,
+                        labelPadding: EdgeInsets.only(left: 15),
+                        indicatorSize: TabBarIndicatorSize.label,
+                        labelColor: AppTheme.white,
+                        unselectedLabelColor: AppTheme.Primarycolor,
+                        indicator: BoxDecoration(
+                          gradient: AppTheme.gradient,
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        tabs: [
+                          TabWidgetC(title: "All"),
+                          TabWidgetC(title: "Stock"),
+                          TabWidgetC(title: "Crypto"),
+                          TabWidgetC(title: "Business"),
+                          TabWidgetC(title: "Business"),
+                        ],
+                      ),
+                    )
+                  ]
+                )),
+            // SizedBox(
+            //   height: ScreenHeight(context)*0.06,
+            //   width: double.infinity,
+            //   child: ListView(
+            //     scrollDirection: Axis.horizontal,
+            //     children: List.generate(tabtext.length, (index) => TabWidget(
+            //         selected: _selectedType == index,
+            //         ontap: (){
+            //           _selectedType = index;
+            //           setState(() {});
+            //         },
+            //         text: tabtext[index])),
+            //   ),
+            // ),
             //VerticalGap(ScreenHeight(context)*0.1),
             SizedBox(
               width: ScreenWidth(context)*0.9,
@@ -104,8 +129,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Icon(Icons.hourglass_empty_rounded,color: AppTheme.Rgb,),
-                  Text('STOCK IS EMPTY', style: T5textStyle,)
+                  Icon(Icons.hourglass_empty_rounded,
+                    color: AppTheme.Rgb,),
+                  Text('STOCK IS EMPTY',
+                    style: T5textStyle,)
                 ],
               ) :ListView(
                 scrollDirection: Axis.vertical,

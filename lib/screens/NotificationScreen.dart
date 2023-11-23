@@ -29,7 +29,8 @@ class _NotificationScreenState extends State<NotificationScreen> {
         backgroundColor: AppTheme.white,
         leading: InkWell(
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> ScreenNavigator()));
+              Navigator.push(context, MaterialPageRoute
+                (builder: (context)=> ScreenNavigator()));
             },
             child: Image.asset(AppIcons.icon)),
         title: Text('Notifications',style : T11textStyle),

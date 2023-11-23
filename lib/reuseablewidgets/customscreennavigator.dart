@@ -31,7 +31,7 @@ int pageindex= 0;
       body: pages[pageindex],
       bottomNavigationBar: Container(
         color: AppTheme.white,
-        height: 60,
+        height: 53,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
