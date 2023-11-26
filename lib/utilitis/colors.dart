@@ -3,6 +3,7 @@
 import 'package:flutter/painting.dart';
 
 class AppTheme{
+  static const Color fill = Color.fromRGBO(0, 128, 255, 0.60);
   static const Color Primarycolor = Color(0xff0080FF);
   static const Color RGB = Color.fromRGBO(0, 0, 0, 0.60);
   static const Color rGB = Color.fromRGBO(0, 0, 0, 0.25);

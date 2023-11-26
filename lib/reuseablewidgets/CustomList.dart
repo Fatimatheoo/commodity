@@ -1,5 +1,6 @@
 import 'package:commodity/reuseablewidgets/AnimatedContainer.dart';
 import 'package:commodity/screens/Profile/personalinfoscreen.dart';
+import 'package:commodity/screens/Subscription/AboutScreen.dart';
 import 'package:commodity/screens/Subscription/Subscription.dart';
 import 'package:commodity/utilitis/colors.dart';
 import 'package:commodity/utilitis/images.dart';
@@ -54,7 +55,9 @@ class _CustomListState extends State<CustomList> {
             leading: Image.asset(AppIcons.info),
             title: Text('About Us',style: T12textStyle,),
             trailing: InkWell(
-              onTap: (){},
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> AboutScreen()));
+              },
               child: Image.asset(AppIcons.Arrow),
             ),
           ),

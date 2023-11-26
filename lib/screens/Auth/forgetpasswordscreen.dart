@@ -7,7 +7,6 @@ import 'package:commodity/utilitis/icons.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:commodity/utilitis/textstyles.dart';
 import 'package:flutter/material.dart';
-import '../../reuseablewidgets/CustomBottomcontainer.dart';
 import '../../utilitis/images.dart';
 
 class ForgotPassworsScreen extends StatelessWidget {

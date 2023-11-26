@@ -39,22 +39,6 @@ class Profile extends StatelessWidget {
              CancelContainer(),
              VerticalGap(ScreenHeight(context)*0.02),
              CustomList(),
-             // SizedBox(
-             //   height: ScreenHeight(context)*0.5,
-             //   width: ScreenWidth(context)*0.9,
-             //   child: ListView(
-             //     scrollDirection: Axis.vertical,
-             //     children: List.generate(customlist.length, (index) => Customlisttile(
-             //         text: customlist[index].text,
-             //         icon : customlist[index].icon,
-             //         image: customlist[index].image,
-             //       ontap: (){
-             //           pages;
-             //       }
-             //       )
-             //     ),
-             //   ),
-             // ),
            ],
          ),
        ),

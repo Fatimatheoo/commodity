@@ -1,5 +1,6 @@
 import 'package:commodity/reuseablewidgets/custombutton.dart';
 import 'package:commodity/reuseablewidgets/customcurvecontainer.dart';
+import 'package:commodity/reuseablewidgets/customscreennavigator.dart';
 import 'package:commodity/reuseablewidgets/customtextbox.dart';
 import 'package:commodity/reuseablewidgets/customtextfield.dart';
 import 'package:commodity/reuseablewidgets/passwordtextfield.dart';
@@ -78,7 +79,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 InkWell(
                     child: Text('Forgot  Password?',style: T6textStyle,),
                 onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const ForgotPassworsScreen()));
+                      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=> ScreenNavigator()), (route) => true);
+                    //  Navigator.push(context, MaterialPageRoute(builder: (context)=> const ForgotPassworsScreen()));
                 },
                 )
               ],

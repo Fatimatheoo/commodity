@@ -1,8 +1,6 @@
 import 'package:commodity/data/CommodityListModel.dart';
-import 'package:commodity/data/Tabtext.dart';
 import 'package:commodity/provider/UserProvider.dart';
 import 'package:commodity/reuseablewidgets/Bottommodalsheet.dart';
-import 'package:commodity/reuseablewidgets/CustomTabWidget.dart';
 import 'package:commodity/reuseablewidgets/TabWidget.dart';
 import 'package:commodity/reuseablewidgets/searchtextfield.dart';
 import 'package:commodity/utilitis/gaps.dart';
@@ -81,21 +79,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     )
                   ]
                 )),
-            // SizedBox(
-            //   height: ScreenHeight(context)*0.06,
-            //   width: double.infinity,
-            //   child: ListView(
-            //     scrollDirection: Axis.horizontal,
-            //     children: List.generate(tabtext.length, (index) => TabWidget(
-            //         selected: _selectedType == index,
-            //         ontap: (){
-            //           _selectedType = index;
-            //           setState(() {});
-            //         },
-            //         text: tabtext[index])),
-            //   ),
-            // ),
-            //VerticalGap(ScreenHeight(context)*0.1),
             SizedBox(
               width: ScreenWidth(context)*0.9,
               child: Row(
