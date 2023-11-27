@@ -1,8 +1,9 @@
 import 'package:commodity/repository/readuserdata.dart';
-import 'package:commodity/screens/Auth/loginscreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../views/login/loginscreen.dart';
 
 class SignUpProvider with ChangeNotifier{
 

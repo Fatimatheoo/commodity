@@ -3,12 +3,12 @@ import 'package:commodity/reuseablewidgets/CustomDialogbox.dart';
 import 'package:commodity/reuseablewidgets/customscreennavigator.dart';
 import 'package:commodity/reuseablewidgets/notificationcheckbox.dart';
 import 'package:flutter/material.dart';
-import '../utilitis/colors.dart';
-import '../utilitis/gaps.dart';
-import '../utilitis/icons.dart';
-import '../utilitis/images.dart';
-import '../utilitis/sizes.dart';
-import '../utilitis/textstyles.dart';
+import '../../utilitis/colors.dart';
+import '../../utilitis/gaps.dart';
+import '../../utilitis/icons.dart';
+import '../../utilitis/images.dart';
+import '../../utilitis/sizes.dart';
+import '../../utilitis/textstyles.dart';
 
 class NotificationScreen extends StatefulWidget {
   const NotificationScreen({super.key});

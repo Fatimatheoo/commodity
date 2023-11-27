@@ -1,7 +1,7 @@
-import 'package:commodity/screens/AlertScreen.dart';
-import 'package:commodity/screens/Profile/Profile.dart';
 import 'package:flutter/material.dart';
-import '../screens/HomeScreen.dart';
+import '../views/alert/AlertScreen.dart';
+import '../views/home/HomeScreen.dart';
+import '../views/profile/Profile.dart';
 
 class Navbarprovider with ChangeNotifier{
 

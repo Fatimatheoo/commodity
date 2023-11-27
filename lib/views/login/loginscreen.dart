@@ -4,8 +4,6 @@ import 'package:commodity/reuseablewidgets/customscreennavigator.dart';
 import 'package:commodity/reuseablewidgets/customtextbox.dart';
 import 'package:commodity/reuseablewidgets/customtextfield.dart';
 import 'package:commodity/reuseablewidgets/passwordtextfield.dart';
-import 'package:commodity/screens/Auth/forgetpasswordscreen.dart';
-import 'package:commodity/screens/Auth/registerscreen.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/icons.dart';
 import 'package:commodity/utilitis/images.dart';
@@ -15,6 +13,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../provider/SigninProvider.dart';
 import '../../utilitis/colors.dart';
+import '../register/registerscreen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

@@ -1,13 +1,13 @@
 import 'package:commodity/reuseablewidgets/customtext.dart';
 import 'package:commodity/reuseablewidgets/gradienttext.dart';
 import 'package:commodity/reuseablewidgets/CustomNavIcons.dart';
-import 'package:commodity/screens/AlertScreen.dart';
-import 'package:commodity/screens/HomeScreen.dart';
-import 'package:commodity/screens/Profile/Profile.dart';
 import 'package:commodity/utilitis/colors.dart';
 import 'package:commodity/utilitis/textstyles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../views/Profile/Profile.dart';
+import '../views/alert/AlertScreen.dart';
+import '../views/home/HomeScreen.dart';
 
 class ScreenNavigator extends StatefulWidget {
    ScreenNavigator({super.key});

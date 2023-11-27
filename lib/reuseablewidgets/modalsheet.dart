@@ -1,17 +1,14 @@
-import 'package:commodity/reuseablewidgets/linechart.dart';
+import 'package:commodity/reuseablewidgets/ModalTabWidget.dart';
+import 'package:commodity/utilitis/colors.dart';
+import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
-import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import '../utilitis/colors.dart';
-import '../utilitis/gaps.dart';
 import '../utilitis/images.dart';
-import '../utilitis/sizes.dart';
 import '../utilitis/textstyles.dart';
-import 'TabWidget.dart';
 import 'gradienttext.dart';
 
-class BottomModalheet extends StatelessWidget {
-  const BottomModalheet({super.key});
+class modalsheet extends StatelessWidget {
+  const modalsheet({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,16 +26,10 @@ class BottomModalheet extends StatelessWidget {
     ];
     return Container(
       width: ScreenWidth(context),
-      height: ScreenHeight(context)*0.6,
+      height: MediaQuery.of(context).size.height * 0.80,
       decoration: BoxDecoration(
-          color: AppTheme.white,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(16),
-            topRight: Radius.circular(16),
-          ),
-          border: GradientBoxBorder(
-              gradient: AppTheme.gradient
-          )
+        borderRadius: BorderRadius.circular(5),
+        color: AppTheme.white
       ),
       child: Column(
         children: [
@@ -79,11 +70,6 @@ class BottomModalheet extends StatelessWidget {
           ),
           Text('+0.12  +0.07% today',style: T36textStyle,),
           Text('+43.38  +33.47% year to date',style: T36textStyle,),
-          VerticalGap(ScreenHeight(context)*0.1),
-         // Divider(
-            //thickness: 1,
-            //color: AppTheme.Rgb,
-          //),
           SizedBox(
             width: 360,
             height: 190,
@@ -91,10 +77,10 @@ class BottomModalheet extends StatelessWidget {
               primaryXAxis: CategoryAxis(),
               series: <ChartSeries>[
                 AreaSeries<ChartData, String>(
-                  dataSource: chartData,
-                  xValueMapper: (ChartData data, _) => data.x,
-                  yValueMapper: (ChartData data, _) => data.y,
-                  color: Color.fromRGBO(10, 204, 205, 0.60)
+                    dataSource: chartData,
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y,
+                    color: Color.fromRGBO(10, 204, 205, 0.60)
                 ),
                 AreaSeries<ChartData, String>(
                     dataSource: chartdata,
@@ -105,13 +91,14 @@ class BottomModalheet extends StatelessWidget {
               ],
             ),
           ),
-          //LineCharts(),
           DefaultTabController(
-              length: 7,
-              initialIndex: 4,
+              length: 5,
+              initialIndex: 2,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children : [
                     Container(
+                      width : 360,
                       child: TabBar(
                         isScrollable: true,
                         labelPadding: EdgeInsets.only(left: 15),
@@ -123,18 +110,17 @@ class BottomModalheet extends StatelessWidget {
                           borderRadius: BorderRadius.circular(5),
                         ),
                         tabs: [
-                          TabWidgetC(title: "1 D"),
-                          TabWidgetC(title: "5 D"),
-                          TabWidgetC(title: "1 M"),
-                          TabWidgetC(title: "YTD"),
-                          TabWidgetC(title: "1 Y"),
-                          TabWidgetC(title: "5 Y",),
-                          TabWidgetC(title: "All",)
+                          ModalTabWidget(title: "1 D"),
+                          ModalTabWidget(title: "5 D"),
+                          ModalTabWidget(title: "YTD"),
+                          ModalTabWidget(title: "1 Y"),
+                          ModalTabWidget(title: "All",)
                         ],
                       ),
                     )
                   ]
               )),
+
         ],
       ),
     );

@@ -1,10 +1,10 @@
 import 'package:commodity/reuseablewidgets/gradienttext.dart';
-import 'package:commodity/screens/Subscription/SubcriptionBenefits.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/icons.dart';
 import 'package:flutter/material.dart';
 import '../../utilitis/colors.dart';
 import '../../utilitis/textstyles.dart';
+import '../subscription_benefits/SubcriptionBenefits.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});

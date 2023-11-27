@@ -4,9 +4,9 @@ import 'package:commodity/reuseablewidgets/CustomBottomcontainer.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
-import '../utilitis/colors.dart';
-import '../utilitis/images.dart';
-import 'Auth/loginscreen.dart';
+import '../../utilitis/colors.dart';
+import '../../utilitis/images.dart';
+import '../login/loginscreen.dart';
 
 class SplashScreen extends StatefulWidget {
   static const String id = 'splashscreen';

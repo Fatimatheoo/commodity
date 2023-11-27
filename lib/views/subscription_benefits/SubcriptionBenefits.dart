@@ -1,14 +1,14 @@
 import 'package:commodity/reuseablewidgets/CustomRow.dart';
 import 'package:commodity/reuseablewidgets/custombutton.dart';
 import 'package:commodity/reuseablewidgets/gradienttext.dart';
-import 'package:commodity/screens/Subscription/AboutScreen.dart';
-import 'package:commodity/screens/Subscription/Subscription.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
 import '../../utilitis/colors.dart';
 import '../../utilitis/icons.dart';
 import '../../utilitis/textstyles.dart';
+import '../Subscription/Subscription.dart';
+import '../about/AboutScreen.dart';
 
 class SubcriptionBenefits extends StatelessWidget {
   const SubcriptionBenefits({super.key});

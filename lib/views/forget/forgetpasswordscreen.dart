@@ -1,13 +1,13 @@
 import 'package:commodity/reuseablewidgets/custombutton.dart';
 import 'package:commodity/reuseablewidgets/customcurvecontainer.dart';
 import 'package:commodity/reuseablewidgets/customtextfield.dart';
-import 'package:commodity/screens/Auth/resetpasswordscreen.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/icons.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:commodity/utilitis/textstyles.dart';
 import 'package:flutter/material.dart';
 import '../../utilitis/images.dart';
+import '../reset/resetpasswordscreen.dart';
 
 class ForgotPassworsScreen extends StatelessWidget {
   const ForgotPassworsScreen({super.key});

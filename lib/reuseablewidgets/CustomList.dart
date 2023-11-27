@@ -1,14 +1,12 @@
 import 'package:commodity/reuseablewidgets/AnimatedContainer.dart';
-import 'package:commodity/screens/Profile/personalinfoscreen.dart';
-import 'package:commodity/screens/Subscription/AboutScreen.dart';
-import 'package:commodity/screens/Subscription/Subscription.dart';
-import 'package:commodity/utilitis/colors.dart';
-import 'package:commodity/utilitis/images.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:commodity/utilitis/textstyles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../utilitis/icons.dart';
+import '../views/Subscription/Subscription.dart';
+import '../views/about/AboutScreen.dart';
+import '../views/info/personalinfoscreen.dart';
 
 class CustomList extends StatefulWidget {
   const CustomList({super.key});

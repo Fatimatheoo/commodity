@@ -2,8 +2,6 @@ import 'package:commodity/reuseablewidgets/custombuttoncontainer.dart';
 import 'package:commodity/reuseablewidgets/customscreennavigator.dart';
 import 'package:commodity/reuseablewidgets/customsizebutton.dart';
 import 'package:commodity/reuseablewidgets/gradienttext.dart';
-import 'package:commodity/screens/Profile/Profile.dart';
-import 'package:commodity/screens/Subscription/SubcriptionBenefits.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/images.dart';
 import 'package:commodity/utilitis/sizes.dart';
@@ -11,6 +9,7 @@ import 'package:flutter/material.dart';
 import '../../utilitis/colors.dart';
 import '../../utilitis/icons.dart';
 import '../../utilitis/textstyles.dart';
+import '../subscription_benefits/SubcriptionBenefits.dart';
 
 class SubcriptionScreen extends StatelessWidget {
   const SubcriptionScreen({super.key});

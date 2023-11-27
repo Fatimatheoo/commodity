@@ -2,7 +2,6 @@ import 'package:commodity/reuseablewidgets/custombutton.dart';
 import 'package:commodity/reuseablewidgets/customscreennavigator.dart';
 import 'package:commodity/reuseablewidgets/customtextfield.dart';
 import 'package:commodity/reuseablewidgets/passwordtextfield.dart';
-import 'package:commodity/screens/Profile/Profile.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';

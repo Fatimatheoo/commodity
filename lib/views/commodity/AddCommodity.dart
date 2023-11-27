@@ -4,10 +4,10 @@ import 'package:commodity/reuseablewidgets/searchtextfield.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
-import '../data/CommodityListModel.dart';
-import '../utilitis/colors.dart';
-import '../utilitis/icons.dart';
-import '../utilitis/textstyles.dart';
+import '../../data/CommodityListModel.dart';
+import '../../utilitis/colors.dart';
+import '../../utilitis/icons.dart';
+import '../../utilitis/textstyles.dart';
 
 class AddCommodity extends StatelessWidget {
   const AddCommodity({super.key});

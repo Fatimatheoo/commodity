@@ -2,17 +2,18 @@ import 'package:commodity/data/CommodityListModel.dart';
 import 'package:commodity/provider/UserProvider.dart';
 import 'package:commodity/reuseablewidgets/Bottommodalsheet.dart';
 import 'package:commodity/reuseablewidgets/TabWidget.dart';
+import 'package:commodity/reuseablewidgets/modalsheet.dart';
 import 'package:commodity/reuseablewidgets/searchtextfield.dart';
 import 'package:commodity/utilitis/gaps.dart';
 import 'package:commodity/utilitis/images.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../reuseablewidgets/CommodityContainer.dart';
-import '../utilitis/colors.dart';
-import '../utilitis/textstyles.dart';
-import 'AddCommodity.dart';
-import 'NotificationScreen.dart';
+import '../../reuseablewidgets/CommodityContainer.dart';
+import '../../utilitis/colors.dart';
+import '../../utilitis/textstyles.dart';
+import '../commodity/AddCommodity.dart';
+import '../notification/NotificationScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -124,9 +125,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   commodity :  commodity[index],
                   ontap: (){
                     showModalBottomSheet(
+                      isScrollControlled: true,
                         context: context,
                         builder: (BuildContext context){
-                          return BottomModalheet();
+                          return modalsheet();
                         });
                   },
                   onpressed: (context){

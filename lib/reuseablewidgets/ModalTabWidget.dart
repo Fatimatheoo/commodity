@@ -1,9 +1,8 @@
-import 'package:commodity/utilitis/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:gradient_borders/box_borders/gradient_box_border.dart';
+import '../utilitis/colors.dart';
 
-class TabWidgetC extends StatelessWidget {
-  TabWidgetC({
+class ModalTabWidget extends StatelessWidget {
+  ModalTabWidget({
     this.title,
     super.key,
   });
@@ -16,10 +15,7 @@ class TabWidgetC extends StatelessWidget {
         horizontal: 18,
       ),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5),
-          border: GradientBoxBorder(
-      gradient: AppTheme.gradient
-    )),
+          borderRadius: BorderRadius.circular(5)),
       height: 30,
       child: Center(
         child: Text(

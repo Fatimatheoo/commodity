@@ -13,7 +13,7 @@ import '../../reuseablewidgets/customtextbox.dart';
 import '../../utilitis/colors.dart';
 import '../../reuseablewidgets/CustomBottomcontainer.dart';
 import '../../utilitis/images.dart';
-import 'loginscreen.dart';
+import '../login/loginscreen.dart';
 
 class Registerscreen extends StatefulWidget {
   const Registerscreen({super.key});
