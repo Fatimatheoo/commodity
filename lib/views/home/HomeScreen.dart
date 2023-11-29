@@ -1,6 +1,5 @@
 import 'package:commodity/data/CommodityListModel.dart';
 import 'package:commodity/provider/UserProvider.dart';
-import 'package:commodity/reuseablewidgets/Bottommodalsheet.dart';
 import 'package:commodity/reuseablewidgets/TabWidget.dart';
 import 'package:commodity/reuseablewidgets/modalsheet.dart';
 import 'package:commodity/reuseablewidgets/searchtextfield.dart';
@@ -25,7 +24,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    int _selectedType = 0;
     var userProvider = Provider.of<UserProvider>(context);
     var searchcontroller = TextEditingController();
     return Scaffold(
@@ -36,7 +34,8 @@ class _HomeScreenState extends State<HomeScreen> {
             future: userProvider.fetchUsername(),
             builder: (context,snapshot){
               if(snapshot.hasData){
-                return Text('Welcome, ${userProvider.username}',style:  T11textStyle,);
+                return Text('Welcome, ${userProvider.username}',
+                  style:  T11textStyle,);
               }else{
                  return Text('${snapshot.error}');
               }
@@ -97,7 +96,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         gradient: AppTheme.gradient,
                         borderRadius: BorderRadius.circular(5)
                       ),
-                      child: Icon(Icons.add,size: 24,color: AppTheme.white,),
+                      child: Icon(Icons.add,
+                        size: 24,
+                        color: AppTheme.white,),
                     ),
                   )
                 ],
@@ -127,6 +128,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     showModalBottomSheet(
                       isScrollControlled: true,
                         context: context,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(10),
+                            topLeft: Radius.circular(10)
+                          )
+                        ),
                         builder: (BuildContext context){
                           return modalsheet();
                         });

@@ -14,10 +14,10 @@ class CommodityAddContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: ontap,
-      child: Padding(
-        padding: EdgeInsets.only(left: 20,right: 20,bottom: 20),
+    return Padding(
+      padding: EdgeInsets.only(left: 20,right: 20,bottom: 20),
+      child: InkWell(
+        onTap: ontap,
         child: Container(
           height: 80,
           width: ScreenWidth(context)*0.9,

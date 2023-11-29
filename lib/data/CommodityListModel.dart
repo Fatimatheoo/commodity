@@ -1,5 +1,4 @@
 import 'package:commodity/utilitis/images.dart';
-import '../model/Notificationmodel.dart';
 import '../model/commoditylistmodel.dart';
 
 List<Commodity> commodity = [

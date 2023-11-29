@@ -1,4 +1,6 @@
+import 'package:commodity/data/PercentageModel.dart';
 import 'package:commodity/reuseablewidgets/ModalTabWidget.dart';
+import 'package:commodity/reuseablewidgets/percentagecontainer.dart';
 import 'package:commodity/utilitis/colors.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
@@ -59,8 +61,11 @@ class modalsheet extends StatelessWidget {
             ),
             child: Image.asset(AppImages.apple),
           ),
-          GradientText('APPLE INC.', gradient: AppTheme.gradient, style: T33textStyle),
-          Text('APPL NASDQ',style: T34textStyle,),
+          GradientText('APPLE INC.',
+              gradient: AppTheme.gradient,
+              style: T33textStyle),
+          Text('APPL NASDQ',
+            style: T34textStyle,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -68,8 +73,10 @@ class modalsheet extends StatelessWidget {
               Text(' USD',style: T5textStyle,)
             ],
           ),
-          Text('+0.12  +0.07% today',style: T36textStyle,),
-          Text('+43.38  +33.47% year to date',style: T36textStyle,),
+          Text('+0.12  +0.07% today',
+            style: T36textStyle,),
+          Text('+43.38  +33.47% year to date',
+            style: T36textStyle,),
           SizedBox(
             width: 360,
             height: 190,
@@ -120,7 +127,21 @@ class modalsheet extends StatelessWidget {
                     )
                   ]
               )),
-
+          Container(
+            width: ScreenWidth(context),
+            height: 48,
+            child: ListView(
+              children: List.generate(
+                  percentageModel.length,
+                      (index) => PercentageContainer(
+                          percentageModel: percentageModel[index])
+              ),
+            )
+          ),
+          Divider(
+            thickness: 1,
+            color: AppTheme.lightblack,
+          )
         ],
       ),
     );

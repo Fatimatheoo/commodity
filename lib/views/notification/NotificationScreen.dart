@@ -40,7 +40,10 @@ class _NotificationScreenState extends State<NotificationScreen> {
               showAlertDialog(
                   context,
                   (){},
-                  (){}
+                  (){
+                    setState(() {
+                    });
+                  }
               );
             },
               child: Image.asset(AppImages.deleteicon))

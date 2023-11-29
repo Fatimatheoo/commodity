@@ -16,21 +16,21 @@ class CommodityContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context){
-    return InkWell(
-      onTap: ontap,
-      child: Padding(
-        padding: EdgeInsets.only(left: 20,right: 20,bottom: 20),
-      child: Slidable(
-        key: Key('$commodity'),
-        endActionPane: ActionPane(
-          motion: const ScrollMotion(),
-          children: [
-          SlidableAction(onPressed : onpressed,
-          backgroundColor: AppTheme.white,
-            icon: Icons.delete_rounded,
-          )
-        ],
-        ),
+    return Padding(
+      padding: EdgeInsets.only(left: 20,right: 20,bottom: 20),
+    child: Slidable(
+      key: Key('$commodity'),
+      endActionPane: ActionPane(
+        motion: const ScrollMotion(),
+        children: [
+        SlidableAction(onPressed : onpressed,
+        backgroundColor: AppTheme.white,
+          icon: Icons.delete_rounded,
+        )
+      ],
+      ),
+      child: InkWell(
+        onTap: ontap,
         child: Container(
           height: 80,
           width: ScreenWidth(context)*0.9,
@@ -63,7 +63,7 @@ class CommodityContainer extends StatelessWidget {
           ),
         ),
       ),
-      ),
+    ),
     );
   }
 }

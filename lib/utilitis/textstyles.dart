@@ -38,6 +38,10 @@ TextStyle T35textStyle = const TextStyle(fontSize: 30,fontStyle: FontStyle.norma
 TextStyle T36textStyle = const TextStyle(fontSize: 16,fontStyle: FontStyle.normal,fontWeight: FontWeight.w500,fontFamily: 'Font1',color: AppTheme.green);
 TextStyle T37textStyle = const TextStyle(fontSize: 15,fontStyle: FontStyle.normal,fontWeight: FontWeight.w500,fontFamily: 'Font1',color: AppTheme.white);
 TextStyle T38textStyle = const TextStyle(fontSize: 15,fontStyle: FontStyle.normal,fontWeight: FontWeight.w500,fontFamily: 'Font1',color: AppTheme.Primarycolor);
+TextStyle T39textStyle = const TextStyle(fontSize: 15,fontStyle: FontStyle.normal,fontWeight: FontWeight.w500,fontFamily: 'Font1',color: AppTheme.lightblack);
+TextStyle T40textStyle = const TextStyle(fontSize: 16,fontStyle: FontStyle.normal,fontWeight: FontWeight.w500,fontFamily: 'Font1',color: AppTheme.lightblack);
+//TextStyle T38textStyle = const TextStyle(fontSize: 15,fontStyle: FontStyle.normal,fontWeight: FontWeight.w500,fontFamily: 'Font1',color: AppTheme.Primarycolor);
+//TextStyle T38textStyle = const TextStyle(fontSize: 15,fontStyle: FontStyle.normal,fontWeight: FontWeight.w500,fontFamily: 'Font1',color: AppTheme.Primarycolor);
 
 
 
