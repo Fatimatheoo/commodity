@@ -7,7 +7,7 @@ import 'package:commodity/utilitis/sizes.dart';
 import 'package:commodity/utilitis/textstyles.dart';
 import 'package:flutter/material.dart';
 import '../../utilitis/images.dart';
-import '../reset/resetpasswordscreen.dart';
+import '../reset/view/resetpasswordscreen.dart';
 
 class ForgotPassworsScreen extends StatelessWidget {
   const ForgotPassworsScreen({super.key});
@@ -32,12 +32,18 @@ class ForgotPassworsScreen extends StatelessWidget {
               VerticalGap(ScreenHeight(context)*0.1),
               CustomContainer(),
               VerticalGap(ScreenHeight(context)*0.1),
-              Center(child: Text('FORGET PASSWORD',style: T1textStyle,)),
+              Center(child: Text(
+                'FORGET PASSWORD',
+                style: T1textStyle,)),
               Center(
-                child: Text('Enter your gmail below to',style: T5textStyle,),
+                child: Text(
+                  'Enter your gmail below to',
+                  style: T5textStyle,),
               ),
               Center(
-                child: Text('receive password instructions',style: T5textStyle,),
+                child: Text(
+                  'receive password instructions',
+                  style: T5textStyle,),
               ),
               VerticalGap(20),
               CustomTextField(
@@ -48,7 +54,8 @@ class ForgotPassworsScreen extends StatelessWidget {
                CustomButton(
                   text: 'Get OTP',
               ontap: (){
-                    Navigator.push(context,MaterialPageRoute(builder: (context)=> const ResetScreen()));
+                    Navigator.push(context,MaterialPageRoute(
+                        builder: (context)=> const ResetScreen()));
               },),
             ],
           ),

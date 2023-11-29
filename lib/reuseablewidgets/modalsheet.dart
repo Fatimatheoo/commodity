@@ -5,6 +5,8 @@ import 'package:commodity/utilitis/colors.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+import '../data/ChartData.dart';
+import '../model/chartdatamodel.dart';
 import '../utilitis/images.dart';
 import '../utilitis/textstyles.dart';
 import 'gradienttext.dart';
@@ -14,18 +16,6 @@ class modalsheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<ChartData> chartData = [
-      ChartData('Feb', 0),
-      ChartData('Apr', 990),
-      ChartData('Jun', 495),
-      ChartData('Nov', 260),
-    ];
-    final List<ChartData> chartdata = [
-      ChartData('Feb', 255),
-      ChartData('Apr', 495),
-      ChartData('Jun', 235),
-      ChartData('Nov', 510),
-    ];
     return Container(
       width: ScreenWidth(context),
       height: MediaQuery.of(context).size.height * 0.80,
@@ -107,6 +97,7 @@ class modalsheet extends StatelessWidget {
                     Container(
                       width : 360,
                       child: TabBar(
+                        labelStyle: T39textStyle,
                         isScrollable: true,
                         labelPadding: EdgeInsets.only(left: 15),
                         indicatorSize: TabBarIndicatorSize.label,
@@ -148,8 +139,3 @@ class modalsheet extends StatelessWidget {
   }
 }
 
-class ChartData {
-  ChartData(this.x, this.y);
-  final String x;
-  final int y;
-}

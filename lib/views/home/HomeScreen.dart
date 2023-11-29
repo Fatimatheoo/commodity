@@ -42,7 +42,8 @@ class _HomeScreenState extends State<HomeScreen> {
             },),
         actions: [
           IconButton(onPressed: (){
-            Navigator.push(context,MaterialPageRoute(builder: (context)=> NotificationScreen()));
+            Navigator.push(context,MaterialPageRoute(
+                builder: (context)=> NotificationScreen()));
           }, icon: Image.asset(AppImages.bellicon))
         ],
         centerTitle: true,
@@ -50,7 +51,8 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SearchTextfield(textEditingController: searchcontroller),
+            SearchTextfield(
+                textEditingController: searchcontroller),
             VerticalGap(10),
             DefaultTabController(
                 length: 5,
@@ -79,15 +81,19 @@ class _HomeScreenState extends State<HomeScreen> {
                     )
                   ]
                 )),
+            VerticalGap(10),
             SizedBox(
               width: ScreenWidth(context)*0.9,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Commodity Stock',style: T13textStyle,),
+                  Text(
+                    'Commodity Stock',
+                    style: T13textStyle,),
                   InkWell(
                     onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> AddCommodity()));
+                      Navigator.push(context, MaterialPageRoute(
+                          builder: (context)=> AddCommodity()));
                     },
                     child: Container(
                       width: 30,
@@ -114,9 +120,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Icon(Icons.hourglass_empty_rounded,
+                  Icon(
+                    Icons.hourglass_empty_rounded,
                     color: AppTheme.Rgb,),
-                  Text('STOCK IS EMPTY',
+                  Text(
+                    'STOCK IS EMPTY',
                     style: T5textStyle,)
                 ],
               ) :ListView(

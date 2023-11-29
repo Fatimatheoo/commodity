@@ -22,10 +22,13 @@ class SubcriptionScreen extends StatelessWidget {
         backgroundColor: AppTheme.white,
         leading : InkWell(
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> ScreenNavigator()));
+              Navigator.push(context, MaterialPageRoute(
+                  builder: (context)=> ScreenNavigator()));
             },
             child: Image.asset(AppIcons.icon)),
-        title: Text('Subscription',style : T11textStyle),
+        title: Text(
+            'Subscription',
+            style : T11textStyle),
         centerTitle: true,
       ),
       body: Column(
@@ -66,7 +69,8 @@ class SubcriptionScreen extends StatelessWidget {
                   VerticalGap(10),
                   CustomButtonContainer(
                     onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> SubcriptionBenefits()));
+                      Navigator.push(context, MaterialPageRoute(
+                          builder: (context)=> SubcriptionBenefits()));
                     },
                   ),
                 ],

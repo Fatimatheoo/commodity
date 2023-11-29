@@ -7,18 +7,11 @@ import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
 import '../../utilitis/colors.dart';
 import '../../utilitis/textstyles.dart';
-import '../Subscription/Subscription.dart';
-import '../info/personalinfoscreen.dart';
 
 class Profile extends StatelessWidget {
    Profile({super.key});
 
-  List pages= [
-    PersonalInformation(),
-    SubcriptionScreen()
-  ];
-
-  @override
+@override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

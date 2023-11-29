@@ -1,7 +1,9 @@
-import 'package:commodity/provider/SigninProvider.dart';
 import 'package:commodity/provider/UserProvider.dart';
 import 'package:commodity/provider/navbarprovider.dart';
-import 'package:commodity/provider/registerprovider.dart';
+import 'package:commodity/views/info/controller/info_controller.dart';
+import 'package:commodity/views/login/controller/logincontroller.dart';
+import 'package:commodity/views/register/controller/register_controller.dart';
+import 'package:commodity/views/reset/controller/resetcontroller.dart';
 import 'package:commodity/views/splash/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -21,9 +23,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider(create: (_)=> Info()),
         ChangeNotifierProvider(create: (_)=> Navbarprovider()),
-        ChangeNotifierProvider(create: (_)=> SigninProvider() ),
-        ChangeNotifierProvider(create: (_)=> SignUpProvider()),
+        ChangeNotifierProvider(create: (_)=> Reset()),
+        ChangeNotifierProvider(create: (_)=> Login()),
+        ChangeNotifierProvider(create: (_)=> Register()),
         ChangeNotifierProvider(create: (_)=> UserProvider())
       ],
       child: MaterialApp(

@@ -6,23 +6,18 @@ import 'package:commodity/utilitis/images.dart';
 import 'package:commodity/utilitis/sizes.dart';
 import 'package:commodity/utilitis/textstyles.dart';
 import 'package:flutter/material.dart';
-import '../../utilitis/colors.dart';
-import '../../reuseablewidgets/CustomBottomcontainer.dart';
+import 'package:provider/provider.dart';
+import '../../../utilitis/colors.dart';
+import '../controller/resetcontroller.dart';
 
-class ResetScreen extends StatefulWidget {
+class ResetScreen extends StatelessWidget {
   const ResetScreen({super.key});
 
   @override
-  State<ResetScreen> createState() => _ResetScreenState();
-}
-
-var passwordcontroller = TextEditingController();
-var newpasswordcontroller = TextEditingController();
-bool passwordVisible = false;
-
-class _ResetScreenState extends State<ResetScreen> {
-  @override
   Widget build(BuildContext context) {
+    var passwordcontroller = TextEditingController();
+    var newpasswordcontroller = TextEditingController();
+    var controller = Provider.of<Reset>(context);
     return Scaffold(
       body: Container(
         width: ScreenWidth(context),
@@ -39,38 +34,38 @@ class _ResetScreenState extends State<ResetScreen> {
               VerticalGap(ScreenHeight(context)*0.1),
               CustomContainer(),
               VerticalGap(ScreenHeight(context)*0.1),
-              Center(child: Text('CREATE NEW PASSWORD',style: T1textStyle,)),
+              Center(child: Text(
+                'CREATE NEW PASSWORD',
+                style: T1textStyle,)),
               VerticalGap(20),
               PasswordTextfield(
                 text: 'New Password',
                 textEditingController: passwordcontroller,
-                obscuretext: passwordVisible,
+                obscuretext: controller.passwordVisible,
                 suffixIcon: IconButton(
-                  icon: Icon(passwordVisible
+                  icon: Icon(
+                      controller.passwordVisible
                       ? Icons.remove_red_eye_outlined
                       : Icons.visibility_off,
                       color: AppTheme.Rgb),
                   onPressed: (){
-                    setState(() {
-                      passwordVisible =!passwordVisible;
-                    });
+                    controller.boolvalue();
                   },
                 ),
               ),
               VerticalGap(10),
               PasswordTextfield(
-                obscuretext: passwordVisible,
+                obscuretext: controller.passwordVisible,
                 text: 'Confirm Password',
                 textEditingController: newpasswordcontroller,
                 suffixIcon: IconButton(
-                  icon: Icon(passwordVisible
+                  icon: Icon(
+                      controller.passwordVisible
                       ? Icons.remove_red_eye_outlined
                       : Icons.visibility_off,
                       color: AppTheme.Rgb),
                   onPressed: (){
-                    setState(() {
-                      passwordVisible =!passwordVisible;
-                    });
+                    controller.boolvalue();
                   },
                 ),
               ),

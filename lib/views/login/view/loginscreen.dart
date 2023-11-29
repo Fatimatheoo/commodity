@@ -11,25 +11,17 @@ import 'package:commodity/utilitis/sizes.dart';
 import 'package:commodity/utilitis/textstyles.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../provider/SigninProvider.dart';
-import '../../utilitis/colors.dart';
-import '../register/registerscreen.dart';
+import '../../../reuseablewidgets/AuthButton.dart';
+import '../../../utilitis/colors.dart';
+import '../../register/view/registerscreen.dart';
+import '../controller/logincontroller.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-var emailcontroller = TextEditingController();
-var passwordcontroller = TextEditingController();
-bool passwordvisible = false;
-
-class _LoginScreenState extends State<LoginScreen> {
-  @override
   Widget build(BuildContext context) {
-    final authProvider = Provider.of<SigninProvider>(context);
+    final controller = Provider.of<Login>(context);
     return Scaffold(
       body: Container(
         width: ScreenWidth(context),
@@ -46,26 +38,28 @@ class _LoginScreenState extends State<LoginScreen> {
           VerticalGap(ScreenHeight(context)*0.1),
           CustomContainer(),
           VerticalGap(ScreenHeight(context)*0.1),
-          Center(child: Text('WELCOME!',style: T1textStyle,)),
+          Center(child: Text(
+            'WELCOME!',
+            style: T1textStyle,)),
           VerticalGap(30),
           CustomTextField(
               text: 'Enter email',
-              textEditingController: emailcontroller,
+              textEditingController: controller.email,
               prefixIcon: Image.asset(AppIcons.email)),
           VerticalGap(10),
           PasswordTextfield(
               text: 'Password',
-              textEditingController: passwordcontroller,
-              obscuretext: passwordVisible,
+              textEditingController: controller.password,
+              obscuretext: controller.passwordVisible,
               suffixIcon: IconButton(
-                 icon: Icon(passwordVisible ?
+                 icon:
+                 Icon(
+                     controller.passwordVisible ?
                  Icons.remove_red_eye_outlined :
                  Icons.visibility_off,
                  color: AppTheme.Rgb),
                 onPressed: (){
-                   setState(() {
-                     passwordVisible =!passwordVisible;
-                   });
+                   controller.boolvalue();
                 },
           ),
           ),
@@ -78,26 +72,28 @@ class _LoginScreenState extends State<LoginScreen> {
                 InkWell(
                     child: Text('Forgot  Password?',style: T6textStyle,),
                 onTap: (){
-                      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=> ScreenNavigator()), (route) => true);
-                    //  Navigator.push(context, MaterialPageRoute(builder: (context)=> const ForgotPassworsScreen()));
+                      Navigator.pushAndRemoveUntil(context,
+                          MaterialPageRoute(builder: (context)=> ScreenNavigator()),
+                              (route) => true);
                 },
                 )
               ],
             ),
           ),
           VerticalGap(ScreenHeight(context)*0.04),
-              CustomButton(text: 'Login',
+              AuthButton(text: 'Login',
             ontap: (){
-              authProvider.SigninUser(
+              controller.SigninUser(
                   context,
-                  emailcontroller.text.trim(),
-                  passwordcontroller.text.trim());
+                  controller.email.text.trim(),
+                  controller.password.text.trim());
             },),
           VerticalGap(ScreenHeight(context)*0.04),
              CustomTextBox(text: 'Register Now',
              account: 'Dont have an account?',
              ontap: (){
-               Navigator.push(context, MaterialPageRoute(builder: (context)=> const Registerscreen()));
+               Navigator.push(context, MaterialPageRoute(
+                   builder: (context)=> const Registerscreen()));
              },
              ),
             ],

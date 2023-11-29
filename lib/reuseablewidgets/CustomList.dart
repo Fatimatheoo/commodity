@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import '../utilitis/icons.dart';
 import '../views/Subscription/Subscription.dart';
 import '../views/about/AboutScreen.dart';
-import '../views/info/personalinfoscreen.dart';
+import '../views/info/view/personalinfoscreen.dart';
 
 class CustomList extends StatefulWidget {
   const CustomList({super.key});

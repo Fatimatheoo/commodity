@@ -6,6 +6,7 @@ import 'package:commodity/utilitis/sizes.dart';
 import 'package:flutter/material.dart';
 import '../../utilitis/colors.dart';
 import '../../utilitis/icons.dart';
+import '../../utilitis/images.dart';
 import '../../utilitis/textstyles.dart';
 import '../Subscription/Subscription.dart';
 import '../about/AboutScreen.dart';
@@ -20,7 +21,9 @@ class SubcriptionBenefits extends StatelessWidget {
         backgroundColor: AppTheme.white,
         leading : InkWell(
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> SubcriptionScreen()));
+              Navigator.push(context, MaterialPageRoute(
+                  builder: (context)=> SubcriptionScreen())
+              );
             },
             child: Image.asset(AppIcons.icon)),
         title: Text('Subscription Benefits',style : T11textStyle),
@@ -33,6 +36,10 @@ class SubcriptionBenefits extends StatelessWidget {
               width: 200,
               height: 115,
               decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(AppImages.benefits),
+                    fit: BoxFit.fill
+                ),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(10),
                   bottomRight: Radius.circular(10)
@@ -41,8 +48,12 @@ class SubcriptionBenefits extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Monthly',style: T14textStyle,),
-                  Text('\$7',style: T15textStyle,)
+                  Text(
+                    'Monthly',
+                    style: T14textStyle,),
+                  Text(
+                    '\$7',
+                    style: T15textStyle,)
                 ],
               ),
             ),
@@ -51,15 +62,24 @@ class SubcriptionBenefits extends StatelessWidget {
           Container(
             child: Column(
               children: [
-                GradientText('Subscription', gradient: AppTheme.gradient,style: T17textStyle,),
-                GradientText('Benefits', gradient: AppTheme.gradient,style: T17textStyle,)
+                GradientText(
+                  'Subscription',
+                  gradient: AppTheme.gradient,
+                  style: T17textStyle,),
+                GradientText(
+                  'Benefits',
+                  gradient: AppTheme.gradient,
+                  style: T17textStyle,)
               ],
             ),
           ),
           VerticalGap(ScreenHeight(context)*0.04),
            CustomRow(
             ontap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> AboutScreen()));
+              Navigator.push(context, MaterialPageRoute(
+                  builder: (context)=> AboutScreen()
+              )
+              );
             },
           ),
           VerticalGap(10),
@@ -71,7 +91,8 @@ class SubcriptionBenefits extends StatelessWidget {
           VerticalGap(10),
           const CustomRow(),
           VerticalGap(20),
-          const CustomButton(text: 'Buy Now ')
+          const CustomButton(
+              text: 'Buy Now ')
         ],
       ),
     );

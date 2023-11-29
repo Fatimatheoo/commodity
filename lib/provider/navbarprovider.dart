@@ -12,7 +12,11 @@ class Navbarprovider with ChangeNotifier{
      Profile()
   ];
 
-  set currentTab(var tab){_currentTab = tab;notifyListeners();}
+  set currentTab(var tab)
+  {_currentTab = tab;
+    notifyListeners();
+  }
   get currentTab => _currentTab;
   get currentScreen => _screens[_currentTab];
+
 }

@@ -5,7 +5,11 @@ import '../utilitis/textstyles.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({super.key,
-    required this.text,required this.textEditingController, required this.prefixIcon, this.ontap, this.onchanged,
+    required this.text,
+    required this.textEditingController,
+    required this.prefixIcon,
+    this.ontap,
+    this.onchanged,
   });
 
   final String text;
@@ -33,7 +37,7 @@ class CustomTextField extends StatelessWidget {
               prefixIcon: prefixIcon,
               hintText: text,
               hintStyle: T4textStyle),
-          style: T4textStyle,
+          style: T12textStyle,
           onTap: ontap,
           onChanged: onchanged,
         )

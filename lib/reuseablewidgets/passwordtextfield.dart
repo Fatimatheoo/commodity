@@ -6,7 +6,11 @@ import '../utilitis/textstyles.dart';
 
 class PasswordTextfield extends StatelessWidget {
   const PasswordTextfield({super.key,
-    required this.text, required this.textEditingController, this.ontap, this.onchanged, required this.suffixIcon, required this.obscuretext});
+    required this.text,
+    required this.textEditingController,
+    this.ontap, this.onchanged,
+    required this.suffixIcon,
+    required this.obscuretext});
 
   final String text;
   final TextEditingController textEditingController;
@@ -37,7 +41,7 @@ class PasswordTextfield extends StatelessWidget {
             suffixIcon: suffixIcon,
             hintText: text,
             hintStyle: T4textStyle),
-        style: T4textStyle,
+        style: T12textStyle,
         onTap: ontap,
         onChanged: onchanged,
       ),

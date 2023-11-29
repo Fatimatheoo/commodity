@@ -19,25 +19,30 @@ class AlertScreen extends StatelessWidget {
       appBar: AppBar(
         leading : InkWell(
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> ScreenNavigator()));
+              Navigator.push(context, MaterialPageRoute(
+                  builder: (context)=> ScreenNavigator()));
             },
             child: Image.asset(AppIcons.icon)),
         backgroundColor: AppTheme.white,
-        title: Text('Commodity Alert',style : T11textStyle),
+        title: Text(
+            'Commodity Alert',
+            style : T11textStyle),
         centerTitle: true,
       ),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SearchTextfield(textEditingController: searchcontroller),
+              SearchTextfield(
+                  textEditingController: searchcontroller),
               VerticalGap(ScreenHeight(context)*0.03),
               SizedBox(
                 height: 600,
                 child: ListView(
                   scrollDirection: Axis.vertical,
                   children: List.generate(
-                      commodity.length, (index) => CommodityContainer(
+                      commodity.length, (index) =>
+                      CommodityContainer(
                     commodity :  commodity[index],
                     ontap: (){},
                   )),

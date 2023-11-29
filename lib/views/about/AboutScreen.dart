@@ -16,7 +16,8 @@ class AboutScreen extends StatelessWidget {
         backgroundColor: AppTheme.white,
         leading : InkWell(
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> SubcriptionBenefits()));
+              Navigator.push(context, MaterialPageRoute(
+                  builder: (context)=> SubcriptionBenefits()));
             },
             child: Image.asset(AppIcons.icon)),
         title: Text('About',style : T11textStyle),

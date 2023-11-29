@@ -1,8 +1,16 @@
-import 'package:commodity/reuseablewidgets/customscreennavigator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import '../../../reuseablewidgets/customscreennavigator.dart';
 
-class SigninProvider with ChangeNotifier{
+class Login with ChangeNotifier{
+
+  var email = TextEditingController();
+  var password = TextEditingController();
+  bool passwordVisible = false;
+  boolvalue(){
+    passwordVisible = !passwordVisible;
+    notifyListeners();
+  }
 
   bool _loading = false;
   bool get loading => _loading;
